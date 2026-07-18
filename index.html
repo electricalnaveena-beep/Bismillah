@@ -51,7 +51,6 @@
         }
         .logo-group { display:flex; align-items:center; gap:14px; cursor: pointer; }
         
-        /* Fixed Horizontal Area for Image Logo Link */
         .wide-logo-container {
             position: relative; 
             width: 240px; 
@@ -126,14 +125,6 @@
         .stat-box { background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid var(--border-light); text-align:center; }
         .stat-box .num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--primary-green); }
 
-        /* ===== PROCESS STEPS MATRIX ===== */
-        .process-section { background:linear-gradient(180deg, var(--dark-green) 0%, var(--primary-green) 100%); color:#fff; }
-        .process-section .section-label { color:var(--accent-yellow); }
-        .process-section .section-header h2 { color:#fff; }
-        .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
-        .process-step { text-align:center; }
-        .step-num { width:80px; height:80px; background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; margin:0 auto 20px; color:var(--accent-yellow); }
-
         /* ===== CONTACT PLATFORM INTERACTION ===== */
         .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
         .contact-info h3 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--dark-green); margin-bottom:16px; }
@@ -201,12 +192,9 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-group">
-                <!-- Outer Wrapper Expanded for Horizontal Graphics Layout -->
                 <div id="logo-branding-slot" class="wide-logo-container clickable-logo-target">
-                    <!-- Default Structural Injected Image Asset -->
                     <img src="" alt="PureYield Dehydrates" style="width: 100%; height: 100%; object-fit: contain; display: block;" id="img-custom-injected-logo" onerror="this.style.display='none'; document.getElementById('fallback-text-logo').style.display='block';">
                     
-                    <!-- Secure Fallback Text Interface -->
                     <div id="fallback-text-logo" style="display: none; font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:var(--primary-green); line-height:1.1;">
                         Pure<span style="color: var(--accent-orange); display:inline;">Yield</span>
                         <span style="font-size:0.7rem; display:block; color:var(--text-muted); font-family:'Inter',sans-serif; letter-spacing:1px; font-weight:600; margin-top:2px;">DEHYDRATES</span>
@@ -262,7 +250,6 @@
             </div>
         </section>
 
-        <!-- Dynamic Value Proposition Feature Layout -->
         <section class="section">
             <div class="container">
                 <div class="section-header">
@@ -294,21 +281,18 @@
             </div>
         </section>
 
-        <!-- Product Preview Dynamic Aggregation Layer -->
         <section class="section products-section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-label" id="node-prod-lbl">Featured Batch</span>
                     <h2 id="node-prod-h2">Pure Dehydrated Variants</h2>
                 </div>
-                <div class="products-grid" id="containerFeaturedProducts">
-                    <!-- Automatically aggregated by Javascript Core Engine -->
-                </div>
+                <div class="products-grid" id="containerFeaturedProducts"></div>
             </div>
         </section>
     </div>
 
-    <!-- ===== MAIN PAGE: DYNAMIC CATALOGUE GRID ===== -->
+    <!-- ===== MAIN PAGE: CATALOGUE ===== -->
     <div class="page" id="page-products">
         <section class="section" style="padding-top:140px; background:var(--warm-cream);">
             <div class="container">
@@ -321,14 +305,12 @@
         </section>
         <section class="section">
             <div class="container">
-                <div class="products-grid" id="containerAllCatalog">
-                    <!-- Dynamic rendering interface target -->
-                </div>
+                <div class="products-grid" id="containerAllCatalog"></div>
             </div>
         </section>
     </div>
 
-    <!-- ===== MAIN PAGE: BRAND HISTORY & VALUE SYSTEM ===== -->
+    <!-- ===== MAIN PAGE: ABOUT ===== -->
     <div class="page" id="page-about">
         <section class="section" style="padding-top:140px;">
             <div class="container">
@@ -357,7 +339,7 @@
         </section>
     </div>
 
-    <!-- ===== MAIN PAGE: CONTACT LINK ===== -->
+    <!-- ===== MAIN PAGE: CONTACT ===== -->
     <div class="page" id="page-contact">
         <section class="section" style="padding-top:140px;">
             <div class="container">
@@ -408,7 +390,7 @@
         </section>
     </div>
 
-    <!-- ===== UNIVERSAL SYSTEM FOOTER ARCHITECTURE ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="nav-container footer-grid">
             <div class="footer-brand">
@@ -441,7 +423,7 @@
         </div>
     </footer>
 
-    <!-- ===== ADMINISTRATIVE CONTROL INTERFACES ===== -->
+    <!-- ===== ADMINISTRATIVE PANEL ===== -->
     <button class="admin-toggle" id="btnAdminCoreSystem" onclick="verifyAdminGateway()">
         🔒 Access Admin Matrix
     </button>
@@ -450,12 +432,12 @@
         <h4>🛠️ Dynamic Global Variable Studio</h4>
         
         <div style="background:#fdf8f0; padding:12px; border-radius:8px; margin-bottom:16px; border:1px solid var(--border-light);">
-            <p style="font-size:0.75rem; font-weight:700; color:var(--accent-orange);">💡 LIVE SCREEN EDIT ACTIVE</p>
-            <p style="font-size:0.7rem; color:var(--text-muted);">You can click directly on any text/title to change it, click pictures to swap paths, or click the logo graphic area to upload your wide custom image logo link!</p>
+            <p style="font-size:0.75rem; font-weight:700; color:var(--accent-orange);">💡 LIVE LOCAL FILE UPLOAD ACTIVE</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">Click directly on the "PureYield Dehydrates" header text area to directly upload your logo image file from your PC/Mobile!</p>
         </div>
 
         <div class="admin-row">
-            <label>Structural Brand Palette (Theme Color)</label>
+            <label>Structural Brand Palette</label>
             <input type="color" id="input-theme-primary" onchange="applyLiveThemeColor(this.value, 'primary')">
         </div>
         <div class="admin-row">
@@ -482,7 +464,7 @@
         <button class="reset-btn" onclick="purgeSystemStorageMatrix()">↺ Wipe Custom Layout Storage</button>
     </div>
 
-    <!-- ===== JAVASCRIPT SYSTEM ENGINE ===== -->
+    <!-- ===== JAVASCRIPT ENGINE ===== -->
     <script>
         const baseSystemDefaults = {
             whatsapp: "https://wa.me/923001234567",
@@ -495,6 +477,7 @@
         };
 
         let systemState = {...baseSystemDefaults};
+        let administrationUnlocked = false;
 
         const functionalProductsData = [
             { id: 1, name: "Premium Dehydrated Banana Chips", category: "Dried Fruit Cuts", price: 340, sizes: "100g - 500g", badge: "100% Sun-Dried", img: "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?w=600&q=80", desc: "Crispy potassium-dense slices perfect for wholesome snacking intervals.", featured: true },
@@ -504,8 +487,6 @@
             { id: 5, name: "Botanical Moringa Leaves Powder", category: "Organic Powders", price: 480, sizes: "100g - 300g", badge: "Natural Superfood", img: "https://images.unsplash.com/photo-1546849443-d4b74c375f47?w=600&q=80", desc: "Fine micronized shade-dehydrated clean moringa leaf clusters.", featured: false },
             { id: 6, name: "Sun-Dried Premium Mango Cheeks", category: "Dried Fruit Cuts", price: 580, sizes: "150g - 500g", badge: "Seasonal Pure Choice", img: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=600&q=80", desc: "Sweet, vitamin-rich dehydrated ripe local mango varieties.", featured: false }
         ];
-
-        let administrationUnlocked = false;
 
         document.addEventListener("DOMContentLoaded", () => {
             initializeSystemState();
@@ -538,16 +519,15 @@
         function setupLogoUploadControl() {
             const logoSlot = document.getElementById("logo-branding-slot");
             
-            // Ek hidden file input element create kar rahe hain
             const hiddenFileInput = document.createElement("input");
             hiddenFileInput.type = "file";
             hiddenFileInput.accept = "image/*";
             hiddenFileInput.style.display = "none";
+            hiddenFileInput.id = "system-hidden-logo-uploader";
             document.body.appendChild(hiddenFileInput);
 
             logoSlot.addEventListener("click", () => {
                 if (!administrationUnlocked) return;
-                // Click karne par direct file explorer open hoga
                 hiddenFileInput.click();
             });
 
@@ -556,28 +536,12 @@
                 if (file) {
                     const reader = new FileReader();
                     reader.onload = function(event) {
-                        // Image ko Base64 string me convert karke save kar rhe hain
                         systemState.customLogoUrl = event.target.result;
                         localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
                         applyLogoStateStructure();
-                        alert("Logo upload ho gaya hai! Save karne k liye panel se 'Commit Structural Changes' par click karein.");
+                        alert("Logo successfully loaded! Click 'Commit Structural Changes' on the control panel to lock it permanently.");
                     };
                     reader.readAsDataURL(file);
-                }
-            });
-        }
-                
-                const currentPromptVal = systemState.customLogoUrl || "Paste your corporate raw image link here...";
-                const logoInputUrl = prompt("Enter custom Logo Image URL link (Leave empty to trigger clean text typography layout):", currentPromptVal);
-                
-                if (logoInputUrl !== null) {
-                    if (logoInputUrl.trim() === "" || logoInputUrl.includes("Paste your corporate raw image")) {
-                        systemState.customLogoUrl = "";
-                    } else {
-                        systemState.customLogoUrl = logoInputUrl.trim();
-                    }
-                    localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
-                    applyLogoStateStructure();
                 }
             });
         }
@@ -716,7 +680,7 @@
                 if (credentialChallenge === "admin123") {
                     administrationUnlocked = true;
                     activateAbsoluteInlineEditing();
-                    alert("Clearance confirmed. All visual nodes, paragraph metrics, and logo graphics are now unlocked for modification.");
+                    alert("Clearance confirmed. Control matrix unlocked.");
                 } else {
                     alert("Clearance verification rejected. Operations restricted.");
                 }
@@ -803,12 +767,12 @@
 
             localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
             applySynchronizedVariables();
-            alert("All dynamic properties saved successfully!");
+            alert("All structural changes committed successfully!");
             disableAdministrativeControlState();
         }
 
         function purgeSystemStorageMatrix() {
-            if (confirm("Revert layout configuration state back to base factory configurations? All custom layouts will be reset.")) {
+            if (confirm("Revert layout configuration state back to factory variables?")) {
                 localStorage.removeItem("bismillah_production_matrix");
                 location.reload();
             }

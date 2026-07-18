@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bismillah Enterprise | Absolute Production Control Canvas</title>
+    <title>Bismillah Enterprise | Production Control Canvas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -31,8 +31,9 @@
             line-height:1.6;
             overflow-x:hidden;
         }
-        img { max-width:100%; display:block; cursor: pointer; transition: opacity 0.2s; }
-        body.edit-mode img:hover { opacity: 0.7; filter: brightness(0.8); }
+        img { max-width:100%; display:block; transition: opacity 0.2s; }
+        body.edit-mode img { cursor: pointer !important; }
+        body.edit-mode img:hover { opacity: 0.7; filter: brightness(0.8); dotted 2px var(--accent-orange); }
         a { text-decoration:none; color:inherit; }
 
         /* ===== NAVIGATION & BRAND LOGO ===== */
@@ -498,7 +499,7 @@
             ig: "https://instagram.com/bismillahenterprise",
             primaryColor: "#1a5c3a",
             accentColor: "#e07b39",
-            htmlSnapshot: {} // Storage for inline text updates
+            htmlSnapshot: {} // Storage for inline text & image updates
         };
 
         let systemState = {...baseSystemDefaults};
@@ -519,6 +520,7 @@
             initializeSystemState();
             renderDynamicProductCards();
             bindSPAInterfaceActions();
+            setupGlobalImageClickHandler(); // Global setup handler
 
             // Window Scroll Listener for Navbar Styling
             window.addEventListener("scroll", () => {
@@ -526,19 +528,24 @@
                 if (window.scrollY > 20) nav.classList.add("scrolled");
                 else nav.classList.remove("scrolled");
             });
+        });
 
-            // Universal Image Click Configuration Handler
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('click', () => {
-                    if (!administrationUnlocked) return;
+        // Universal Image Click Configuration Handler
+        function setupGlobalImageClickHandler() {
+            document.addEventListener('click', (e) => {
+                if (!administrationUnlocked) return;
+                
+                // Target dynamically added images as well
+                if (e.target.tagName === 'IMG') {
+                    const img = e.target;
                     const nextUrl = prompt("Enter replacement public image URL target text:", img.src);
                     if (nextUrl && nextUrl.trim() !== "") {
                         img.src = nextUrl.trim();
-                        recordInlineTextMutation(img.id, nextUrl.trim(), true);
+                        recordInlineTextMutation(img.id, nextUrl.trim(), false);
                     }
-                });
+                }
             });
-        });
+        }
 
         // Initialize State & Storage
         function initializeSystemState() {
@@ -583,7 +590,6 @@
             // Apply Theme Properties
             document.documentElement.style.setProperty('--primary-green', systemState.primaryColor);
             document.documentElement.style.setProperty('--accent-orange', systemState.accentColor);
-            // Derive dark green variant safely
             document.documentElement.style.setProperty('--dark-green', adjustColorBrightness(systemState.primaryColor, -30));
         }
 
@@ -665,7 +671,7 @@
                 if (credentialChallenge === "admin123") {
                     administrationUnlocked = true;
                     activateAbsoluteInlineEditing();
-                    alert("Clearance confirmed. All visual nodes, paragraph metrics, and layout targets are now unlocked for text modification.");
+                    alert("Clearance confirmed. All visual nodes, paragraph metrics, and layout targets are now unlocked for text and image modification.");
                 } else {
                     alert("Clearance verification rejected. Operations restricted.");
                 }
@@ -686,10 +692,8 @@
             // Loop through all text elements to make them editable
             const targetSelectors = 'h1, h2, h3, h4, p, span, a.btn-primary, a.btn-secondary, div.feature-card h3, div.stat-box .num, div.stat-box .label, div.logo-text';
             document.querySelectorAll(targetSelectors).forEach(node => {
-                // Keep functional operational system paths non-editable
                 if (node.classList.contains("nav-link") || node.classList.contains("whatsapp-btn") || node.closest(".admin-panel") || node.closest(".logo-fruit-b")) return;
                 
-                // Assign systematic tracking identifier fallback strings if missing
                 if (!node.id) {
                     node.id = "auto-node-" + Math.random().toString(36).substr(2, 9);
                 }
@@ -700,7 +704,7 @@
             
             // Re-render product grids to inject text contenteditable properties
             renderDynamicProductCards();
-            applySynchronizedVariables(); // Re-apply text state onto new attributes
+            applySynchronizedVariables(); // Re-apply snapshots onto newly rendered cards
             
             // Bind input listeners to the dynamic cards post-render
             document.querySelectorAll(".product-card [contenteditable='true']").forEach(node => {
@@ -757,7 +761,7 @@
             systemState.fb = document.getElementById("cfg-fb").value.trim();
             systemState.ig = document.getElementById("cfg-ig").value.trim();
 
-            // Save all custom inline modifications alongside configurations
+            // Save everything to localstorage
             localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
             applySynchronizedVariables();
             alert("All global modifications successfully written to browser memory layout!");

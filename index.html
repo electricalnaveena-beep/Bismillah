@@ -537,8 +537,35 @@
 
         function setupLogoUploadControl() {
             const logoSlot = document.getElementById("logo-branding-slot");
+            
+            // Ek hidden file input element create kar rahe hain
+            const hiddenFileInput = document.createElement("input");
+            hiddenFileInput.type = "file";
+            hiddenFileInput.accept = "image/*";
+            hiddenFileInput.style.display = "none";
+            document.body.appendChild(hiddenFileInput);
+
             logoSlot.addEventListener("click", () => {
                 if (!administrationUnlocked) return;
+                // Click karne par direct file explorer open hoga
+                hiddenFileInput.click();
+            });
+
+            hiddenFileInput.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        // Image ko Base64 string me convert karke save kar rhe hain
+                        systemState.customLogoUrl = event.target.result;
+                        localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
+                        applyLogoStateStructure();
+                        alert("Logo upload ho gaya hai! Save karne k liye panel se 'Commit Structural Changes' par click karein.");
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
                 
                 const currentPromptVal = systemState.customLogoUrl || "Paste your corporate raw image link here...";
                 const logoInputUrl = prompt("Enter custom Logo Image URL link (Leave empty to trigger clean text typography layout):", currentPromptVal);

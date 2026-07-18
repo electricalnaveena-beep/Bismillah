@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunsliced Foods | Premium Dehydrated Products</title>
+    <title>PureYield Dehydrates | Premium Dehydrated Products</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -51,8 +51,15 @@
         }
         .logo-group { display:flex; align-items:center; gap:14px; cursor: pointer; }
         
-        .logo-text { font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:700; color:var(--primary-green); letter-spacing: -0.3px; line-height: 1.1; }
-        .logo-text span { font-weight:400; font-size:0.78rem; display:block; color:var(--text-muted); margin-top:2px; font-family:'Inter',sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; }
+        /* Fixed Horizontal Area for Image Logo Link */
+        .wide-logo-container {
+            position: relative; 
+            width: 240px; 
+            height: 55px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: flex-start;
+        }
         
         .nav-links { display:flex; gap:36px; list-style:none; }
         .nav-links a { font-weight:500; font-size:0.9rem; color:var(--text-dark); position:relative; padding:4px 0; }
@@ -194,23 +201,17 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-group">
-                <!-- Editable Logo Slot Wrapper -->
-                <div id="logo-branding-slot" class="clickable-logo-target" style="position: relative; width: 50px; height: 50px; filter: drop-shadow(0px 4px 10px rgba(224, 123, 57, 0.25)); display: flex; align-items: center; justify-content: center;">
-                    <!-- Default SVG Graphic Rendered Initially -->
-                    <svg id="default-svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-                        <circle cx="50" cy="50" r="44" fill="none" stroke="#e07b39" stroke-width="3" stroke-dasharray="6 4" opacity="0.85"/>
-                        <path d="M 50,12 A 38,38 0 0,1 88,50 L 50,50 Z" fill="#f5c542" opacity="0.95" />
-                        <path d="M 50,50 L 88,50 A 38,38 0 0,1 50,88 Z" fill="#e07b39" />
-                        <path d="M 50,50 L 50,88 A 38,38 0 0,1 12,50 Z" fill="#1a5c3a" />
-                        <path d="M 12,50 A 38,38 0 0,1 50,12 L 50,50 Z" fill="#227046" opacity="0.9" />
-                        <line x1="50" y1="12" x2="50" y2="88" stroke="#fdf8f0" stroke-width="2.5" />
-                        <line x1="12" y1="50" x2="88" y2="50" stroke="#fdf8f0" stroke-width="2.5" />
-                        <line x1="23.2" y1="23.2" x2="76.8" y2="76.8" stroke="#fdf8f0" stroke-width="2" />
-                        <line x1="23.2" y1="76.8" x2="76.8" y2="23.2" stroke="#fdf8f0" stroke-width="2" />
-                        <circle cx="50" cy="50" r="6" fill="#fdf8f0" />
-                    </svg>
+                <!-- Outer Wrapper Expanded for Horizontal Graphics Layout -->
+                <div id="logo-branding-slot" class="wide-logo-container clickable-logo-target">
+                    <!-- Default Structural Injected Image Asset -->
+                    <img src="" alt="PureYield Dehydrates" style="width: 100%; height: 100%; object-fit: contain; display: block;" id="img-custom-injected-logo" onerror="this.style.display='none'; document.getElementById('fallback-text-logo').style.display='block';">
+                    
+                    <!-- Secure Fallback Text Interface -->
+                    <div id="fallback-text-logo" style="display: none; font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:var(--primary-green); line-height:1.1;">
+                        Pure<span style="color: var(--accent-orange); display:inline;">Yield</span>
+                        <span style="font-size:0.7rem; display:block; color:var(--text-muted); font-family:'Inter',sans-serif; letter-spacing:1px; font-weight:600; margin-top:2px;">DEHYDRATES</span>
+                    </div>
                 </div>
-                <div class="logo-text" id="node-brand-title" contenteditable="false">Sun<span style="color: #e07b39; display: inline;">sliced</span><span id="node-brand-sub">Foods & Organics</span></div>
             </div>
             <ul class="nav-links">
                 <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
@@ -338,7 +339,7 @@
                     <div class="about-content">
                         <span class="section-label" id="node-ab-lbl">Our Core Values</span>
                         <h3 id="node-ab-h3">Minimizing Waste, Maximizing Nutritional Vitality</h3>
-                        <p id="node-ab-p1">Sunsliced Foods specializes in advanced industrial-grade agricultural dehydration. We convert fresh surplus yields into reliable, shelf-stable ingredients, mitigating structural post-harvest storage losses for Pakistani farming clusters.</p>
+                        <p id="node-ab-p1">PureYield Dehydrates specializes in advanced industrial-grade agricultural dehydration. We convert fresh surplus yields into reliable, shelf-stable ingredients, mitigating structural post-harvest storage losses for Pakistani farming clusters.</p>
                         <p id="node-ab-p2">We entirely disallow modern manufacturing shortcuts such as sulfur chemical saturation, sugar crystallization syrups, or artificial pigment enhancements. The natural visual geometry is preserved cleanly.</p>
                         <div class="about-stats">
                             <div class="stat-box">
@@ -356,7 +357,7 @@
         </section>
     </div>
 
-    <!-- ===== MAIN PAGE: INTERACTIVE REGISTRATION AND CONTACT LINK ===== -->
+    <!-- ===== MAIN PAGE: CONTACT LINK ===== -->
     <div class="page" id="page-contact">
         <section class="section" style="padding-top:140px;">
             <div class="container">
@@ -377,7 +378,7 @@
                             <div class="contact-icon">✉️</div>
                             <div>
                                 <h4 id="node-ct-em-h">Electronic Mail Box</h4>
-                                <p><span id="node-ct-email-val">info@sunslicedfoods.pk</span></p>
+                                <p><span id="node-ct-email-val">info@pureyield.pk</span></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -389,8 +390,8 @@
                         </div>
 
                         <div style="margin-top:24px; display:flex; gap:12px;">
-                            <a href="#" id="anchor-fb-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Facebook Profile Link</a>
-                            <a href="#" id="anchor-ig-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Instagram Catalog Link</a>
+                            <a href="#" id="anchor-fb-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Facebook Profile</a>
+                            <a href="#" id="anchor-ig-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Instagram Catalog</a>
                         </div>
                     </div>
 
@@ -411,7 +412,7 @@
     <footer class="footer">
         <div class="nav-container footer-grid">
             <div class="footer-brand">
-                <h4 id="node-foot-brand-h">Sunsliced Foods</h4>
+                <h4 id="node-foot-brand-h">PureYield Dehydrates</h4>
                 <p id="node-foot-brand-p">Premium food dehydration processing platforms. Structuring sustainable food retention networks across Pakistani regional sectors.</p>
             </div>
             <div>
@@ -436,7 +437,7 @@
             </div>
         </div>
         <div class="nav-container footer-bottom">
-            <p id="node-foot-copy">&copy; 2026 Sunsliced Foods. Retaining Natural Purity Processes. All Rights Reserved.</p>
+            <p id="node-foot-copy">&copy; 2026 PureYield Dehydrates. Retaining Natural Purity Processes. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -450,7 +451,7 @@
         
         <div style="background:#fdf8f0; padding:12px; border-radius:8px; margin-bottom:16px; border:1px solid var(--border-light);">
             <p style="font-size:0.75rem; font-weight:700; color:var(--accent-orange);">💡 LIVE SCREEN EDIT ACTIVE</p>
-            <p style="font-size:0.7rem; color:var(--text-muted);">You can click directly on any text/title to change it, click pictures to swap paths, or click the logo graphic to upload your custom image logo!</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">You can click directly on any text/title to change it, click pictures to swap paths, or click the logo graphic area to upload your wide custom image logo link!</p>
         </div>
 
         <div class="admin-row">
@@ -485,12 +486,12 @@
     <script>
         const baseSystemDefaults = {
             whatsapp: "https://wa.me/923001234567",
-            fb: "https://facebook.com/sunslicedfoods",
-            ig: "https://instagram.com/sunslicedfoods",
+            fb: "https://facebook.com/pureyielddehydrates",
+            ig: "https://instagram.com/pureyielddehydrates",
             primaryColor: "#1a5c3a",
             accentColor: "#e07b39",
             htmlSnapshot: {},
-            customLogoUrl: "" // Custom URL tracker for uploaded logo asset
+            customLogoUrl: "" 
         };
 
         let systemState = {...baseSystemDefaults};
@@ -511,7 +512,7 @@
             renderDynamicProductCards();
             bindSPAInterfaceActions();
             setupGlobalImageClickHandler();
-            setupLogoUploadControl(); // Bind specific logo editing structure
+            setupLogoUploadControl(); 
 
             window.addEventListener("scroll", () => {
                 const nav = document.getElementById("navbar");
@@ -520,7 +521,6 @@
             });
         });
 
-        // Interactive Editable Image Configuration Handler
         function setupGlobalImageClickHandler() {
             document.addEventListener('click', (e) => {
                 if (!administrationUnlocked) return;
@@ -535,17 +535,16 @@
             });
         }
 
-        // Logo Image Upload Gateway Management
         function setupLogoUploadControl() {
             const logoSlot = document.getElementById("logo-branding-slot");
             logoSlot.addEventListener("click", () => {
                 if (!administrationUnlocked) return;
                 
-                const currentPromptVal = systemState.customLogoUrl || "Paste corporate image logo link here...";
-                const logoInputUrl = prompt("Enter custom Image URL to replace branding logo (Leave completely blank to restore default Sun design):", currentPromptVal);
+                const currentPromptVal = systemState.customLogoUrl || "Paste your corporate raw image link here...";
+                const logoInputUrl = prompt("Enter custom Logo Image URL link (Leave empty to trigger clean text typography layout):", currentPromptVal);
                 
                 if (logoInputUrl !== null) {
-                    if (logoInputUrl.trim() === "" || logoInputUrl.includes("Paste corporate image logo")) {
+                    if (logoInputUrl.trim() === "" || logoInputUrl.includes("Paste your corporate raw image")) {
                         systemState.customLogoUrl = "";
                     } else {
                         systemState.customLogoUrl = logoInputUrl.trim();
@@ -557,28 +556,20 @@
         }
 
         function applyLogoStateStructure() {
-            const logoSlot = document.getElementById("logo-branding-slot");
+            const injectedImg = document.getElementById("img-custom-injected-logo");
+            const fallbackTxt = document.getElementById("fallback-text-logo");
+
             if (systemState.customLogoUrl && systemState.customLogoUrl !== "") {
-                logoSlot.innerHTML = `<img src="${systemState.customLogoUrl}" alt="Sunsliced Logo" style="width: 100%; height: 100%; object-fit: contain;" id="img-custom-injected-logo">`;
+                injectedImg.src = systemState.customLogoUrl;
+                injectedImg.style.display = 'block';
+                fallbackTxt.style.display = 'none';
             } else {
-                logoSlot.innerHTML = `
-                    <svg id="default-svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-                        <circle cx="50" cy="50" r="44" fill="none" stroke="var(--accent-orange)" stroke-width="3" stroke-dasharray="6 4" opacity="0.85"/>
-                        <path d="M 50,12 A 38,38 0 0,1 88,50 L 50,50 Z" fill="var(--accent-yellow)" opacity="0.95" />
-                        <path d="M 50,50 L 88,50 A 38,38 0 0,1 50,88 Z" fill="var(--accent-orange)" />
-                        <path d="M 50,50 L 50,88 A 38,38 0 0,1 12,50 Z" fill="var(--primary-green)" />
-                        <path d="M 12,50 A 38,38 0 0,1 50,12 L 50,50 Z" fill="var(--primary-green)" opacity="0.9" />
-                        <line x1="50" y1="12" x2="50" y2="88" stroke="#fdf8f0" stroke-width="2.5" />
-                        <line x1="12" y1="50" x2="88" y2="50" stroke="#fdf8f0" stroke-width="2.5" />
-                        <line x1="23.2" y1="23.2" x2="76.8" y2="76.8" stroke="#fdf8f0" stroke-width="2" />
-                        <line x1="23.2" y1="76.8" x2="76.8" y2="23.2" stroke="#fdf8f0" stroke-width="2" />
-                        <circle cx="50" cy="50" r="6" fill="#fdf8f0" />
-                    </svg>
-                `;
+                injectedImg.src = "";
+                injectedImg.style.display = 'none';
+                fallbackTxt.style.display = 'block';
             }
         }
 
-        // Initialize State & Memory
         function initializeSystemState() {
             const compiledStorage = localStorage.getItem("bismillah_production_matrix");
             if (compiledStorage) {
@@ -593,10 +584,8 @@
         }
 
         function applySynchronizedVariables() {
-            // Apply Logo Selection Matrix
             applyLogoStateStructure();
 
-            // Apply Dynamic Inline Text Configurations
             if (systemState.htmlSnapshot) {
                 Object.keys(systemState.htmlSnapshot).forEach(nodeId => {
                     const element = document.getElementById(nodeId);
@@ -610,7 +599,6 @@
                 });
             }
 
-            // Sync Inputs & Social Links
             document.getElementById("cfg-whatsapp").value = systemState.whatsapp;
             document.getElementById("cfg-fb").value = systemState.fb;
             document.getElementById("cfg-ig").value = systemState.ig;
@@ -621,14 +609,12 @@
             document.getElementById("anchor-fb-link").href = systemState.fb;
             document.getElementById("anchor-ig-link").href = systemState.ig;
 
-            // Apply CSS Theme Properties globally
             document.documentElement.style.setProperty('--primary-green', systemState.primaryColor);
             document.documentElement.style.setProperty('--accent-orange', systemState.accentColor);
             document.documentElement.style.setProperty('--accent-yellow', systemState.accentColor === "#e07b39" ? "#f5c542" : "#ffe699");
             document.documentElement.style.setProperty('--dark-green', adjustColorBrightness(systemState.primaryColor, -30));
         }
 
-        // SPA Navigation Configuration
         function bindSPAInterfaceActions() {
             document.querySelectorAll(".nav-link").forEach(anchor => {
                 anchor.addEventListener("click", (e) => {
@@ -651,7 +637,6 @@
             });
         }
 
-        // Card Architecture Aggregation Engine
         function buildDynamicCardBlueprint(item, scopeKey) {
             const uniqueCardId = `card-prod-${scopeKey}-${item.id}`;
             return `
@@ -692,14 +677,12 @@
             if (catalogContainer) catalogContainer.innerHTML = catalogAccumulator;
         }
 
-        // WhatsApp Pipeline Logic
         function executeWhatsAppTransmission(baseName, priceNodeId) {
             const targetedPrice = document.getElementById(priceNodeId)?.textContent.trim() || "Negotiable";
-            const stringPayload = `Assalam-o-Alaikum Sunsliced Foods, I wish to query current distribution details or process an inventory request for the premium product variant [${baseName}] evaluated at Rs. ${targetedPrice}. Please confirm shipment steps.`;
+            const stringPayload = `Assalam-o-Alaikum PureYield Dehydrates, I wish to query current distribution details or process an inventory request for the premium product variant [${baseName}] evaluated at Rs. ${targetedPrice}. Please confirm shipment steps.`;
             window.open(`${systemState.whatsapp}?text=${encodeURIComponent(stringPayload)}`, '_blank');
         }
 
-        // Administrative Access Controller
         function verifyAdminGateway() {
             if (!administrationUnlocked) {
                 const credentialChallenge = prompt("Enter administrative clearance pass key string:", "");
@@ -723,7 +706,7 @@
             actionBtn.innerHTML = "🏁 Lock Administration";
             actionBtn.style.background = "var(--primary-green)";
 
-            const targetSelectors = 'h1, h2, h3, h4, p, span, a.btn-primary, a.btn-secondary, div.feature-card h3, div.stat-box .num, div.stat-box .label, div.logo-text';
+            const targetSelectors = 'h1, h2, h3, h4, p, span, a.btn-primary, a.btn-secondary, div.feature-card h3, div.stat-box .num, div.stat-box .label';
             document.querySelectorAll(targetSelectors).forEach(node => {
                 if (node.classList.contains("nav-link") || node.classList.contains("whatsapp-btn") || node.closest(".admin-panel") || node.closest(".clickable-logo-target")) return;
                 

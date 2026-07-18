@@ -1,1093 +1,791 @@
-
-New Chat
-Ctrl
-K
-Plugins
-Scheduled Tasks
-
-Collapse
-Kimi Work
-Kimi Code
-
-Kimi Claw
-
-Chats
-All Chats
-Bismillah Brand Design Prompt
-
-Bismillah Logo & Site Prompt
-
-FB链接无法访问
-
-工资单概览
-
-PLC 运动控制
-
-
-Invite to Earn
-Up to 1-year K3 Credits
-
-
-Bismillah Brand Design Prompt
-Part 1: Logo Design Prompt (For AI Image Generators)
-​Prompt:
-A professional, minimalist, and modern corporate logo for a premium food dehydration company named "Bismillah Enterprise". The logo icon must feature the letter "B" creatively blended with a dehydrated/dried fruit element. Specifically, the curve or spine of the letter "B" should be shaped out of a sliced, sun-dried banana chip or a dried fruit ring/slice, showcasing visible natural texture lines and a warm golden-yellow color palette. The design must instantly communicate that the company specializes in drying/dehydrating fruits and vegetables, not liquid drinks. The text "Bismillah Enterprise" should be clean, modern typography underneath or beside the icon, keeping the overall design visual with minimal text. Vector style, isolated on a clean white background, corporate, high-end food industry standard.
-​Part 2: Website Development Prompt (For Coding/AI Builders)
-​Prompt:
-Create a fully responsive, highly professional 4-page e-commerce/showcase website (Home, Products, About Us, Contact) inside a single-file HTML/CSS/JavaScript template for a startup named "Bismillah Enterprise".
-​Business Context: The company specializes in Food Dehydration (hygienically drying fresh fruits, vegetables, dry fruits, and organic powders like garlic/onion/moringa powder). They offer premium packaging ranging from 100g to 500g. It is currently a purely online store based in Pakistan.
-​Design & Style Requirements:
-​Visual Theme: Clean, organic, premium feel inspired by modern organic food brands (similar to sundriedpk.com). Use a professional color scheme: deep organic green, warm sun-dried orange/yellow accents, and clean off-white backgrounds.
-​Images: Use high-quality placeholders or direct royalty-free Unsplash URLs showing actual sun-dried/dehydrated foods (like dried apple rings, banana chips, garlic/onion powders, etc.). Do not show liquid hydration/energy drinks.
-​Product Cards: Display product cards showing clear packaging size tags ("100g - 500g"), clear pricing placeholders (e.g., Rs. 250), an "Order via WhatsApp" button, and custom badge highlights ("100% Organic", "Pure Powder").
-​Frontend Live Editable Feature: Include a toggle-able "Admin Edit Mode" button at the bottom. When activated using JavaScript contenteditable, the user must be able to directly click and edit text fields across the site (such as Phone number, WhatsApp link, Facebook/Instagram URLs, and Location placeholder) directly on the screen.
-​Data Persistence: Implement a JavaScript save mechanism (using localStorage) so that any edits made in the frontend edit mode remain saved even after the browser page is refreshed.
-Edit
-Copy
-Share
-I'll create both parts for you: a detailed logo design prompt and a fully functional, live-editable website for Bismillah Enterprise.
-Part 1: Logo Design Prompt
-Prompt for AI Image Generators (Midjourney, DALL-E, Stable Diffusion):
-A professional, minimalist, modern corporate logo for a premium food dehydration company named "Bismillah Enterprise". The logo icon features the letter "B" creatively blended with a dehydrated/dried fruit element — the curve and spine of the letter "B" is shaped out of a sliced, sun-dried banana chip with visible natural texture lines, grain details, and a warm golden-yellow to amber color palette. The design clearly communicates fruit/vegetable dehydration, NOT liquid drinks. Clean, modern sans-serif typography for "Bismillah Enterprise" positioned beneath the icon. Vector style, flat design, isolated on pure white background, corporate, high-end food industry standard, scalable, 4K resolution, dribbble/behance quality.
-Part 2: Complete Website
-I'll build the full 4-page responsive website with live admin edit mode and localStorage persistence.
-Execute Python code
-I've created everything for you. Here's the complete deliverable:
-Part 1: Logo Design Prompt
-Prompt for AI Image Generators (Midjourney, DALL-E, Stable Diffusion):
-A professional, minimalist, modern corporate logo for a premium food dehydration company named "Bismillah Enterprise". The logo icon features the letter "B" creatively blended with a dehydrated/dried fruit element — the curve and spine of the letter "B" is shaped out of a sliced, sun-dried banana chip with visible natural texture lines, grain details, and a warm golden-yellow to amber color palette. The design clearly communicates fruit/vegetable dehydration, NOT liquid drinks. Clean, modern sans-serif typography for "Bismillah Enterprise" positioned beneath the icon. Vector style, flat design, isolated on pure white background, corporate, high-end food industry standard, scalable, 4K resolution, dribbble/behance quality.
-Part 2: Complete Website
-Download the full website here: Bismillah Enterprise Website
-What's Included:
-Table
-Feature	Description
-4 Pages	Home, Products, About Us, Contact — all in a single file with smooth SPA-style navigation
-Responsive Design	Fully mobile-optimized with hamburger menu and adaptive grids
-Premium Visual Theme	Deep organic green, warm sun-dried orange/yellow accents, off-white backgrounds
-Real Product Images	High-quality Unsplash photos of actual dried fruits, banana chips, garlic/onion powders, moringa
-Product Cards	Each card shows: category, description, price (Rs. PKR), size badge (100g–500g), "Order via WhatsApp" button, and organic/pure badges
-9 Products	Banana chips, apple rings, garlic powder, onion powder, moringa powder, mixed dry fruits, mango slices, vegetable mix, dried dates
-Hero Section	Animated floating product cards, gradient backgrounds, CTA buttons
-Process Section	4-step "Farm to Package" visual journey
-About Page	Company story, stats, checkmarks, image with decorative accent
-Contact Page	Editable contact info, contact form, social links, business hours
-Admin Edit Mode (Live Frontend Editing):
-Click the orange "⚙️ Admin Edit Mode" button at the bottom-right
-Edit directly on the page — click any text field (phone, email, location) and type
-Or use the admin panel — update Phone, Email, Location, WhatsApp link, Facebook URL, Instagram URL
-Click "💾 Save Changes" — everything persists in localStorage
-Refresh the page — your edits remain saved
-Click "↺ Reset to Default" to restore original values
-How to Use:
-Simply open the downloaded .html file in any browser. No server, no build step, no dependencies — it works entirely offline.
-
-
-Using bonus credits
-K2.6
-bismillah_enterprise_website.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bismillah Enterprise | Premium Food Dehydration</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-    --primary-green: #1a5c3a;
-    --dark-green: #0f3d26;
-    --accent-orange: #e07b39;
-    --accent-yellow: #f5c542;
-    --warm-cream: #fdf8f0;
-    --off-white: #faf9f7;
-    --text-dark: #1e1e1e;
-    --text-muted: #6b6b6b;
-    --border-light: #e8e4df;
-    --shadow-soft: 0 4px 24px rgba(26,92,58,0.08);
-    --shadow-card: 0 8px 32px rgba(0,0,0,0.06);
-    --radius: 16px;
-    --radius-sm: 10px;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    font-family:'Inter',sans-serif;
-    background:var(--off-white);
-    color:var(--text-dark);
-    line-height:1.6;
-    overflow-x:hidden;
-}
-img { max-width:100%; display:block; }
-a { text-decoration:none; color:inherit; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bismillah Enterprise | Absolute Production Control Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #1a5c3a;
+            --dark-green: #0f3d26;
+            --accent-orange: #e07b39;
+            --accent-yellow: #f5c542;
+            --warm-cream: #fdf8f0;
+            --off-white: #faf9f7;
+            --text-dark: #1e1e1e;
+            --text-muted: #6b6b6b;
+            --border-light: #e8e4df;
+            --shadow-soft: 0 4px 24px rgba(26,92,58,0.08);
+            --shadow-card: 0 8px 32px rgba(0,0,0,0.06);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
 
-/* ===== NAVIGATION ===== */
-.navbar {
-    position:fixed; top:0; left:0; right:0; z-index:1000;
-    background:rgba(253,248,240,0.92);
-    backdrop-filter:blur(20px);
-    border-bottom:1px solid var(--border-light);
-    transition:all 0.3s ease;
-}
-.navbar.scrolled { box-shadow:var(--shadow-soft); }
-.nav-container {
-    max-width:1280px; margin:0 auto; padding:0 24px;
-    display:flex; align-items:center; justify-content:space-between; height:72px;
-}
-.logo-group { display:flex; align-items:center; gap:12px; }
-.logo-icon {
-    width:42px; height:42px; background:var(--primary-green);
-    border-radius:12px; display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:700; font-size:20px; font-family:'Playfair Display',serif;
-    position:relative; overflow:hidden;
-}
-.logo-icon::after {
-    content:''; position:absolute; inset:0;
-    background:linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-yellow) 100%);
-    opacity:0.3;
-}
-.logo-text { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; color:var(--primary-green); }
-.logo-text span { font-weight:400; font-size:0.85rem; display:block; color:var(--text-muted); margin-top:-4px; }
-.nav-links { display:flex; gap:36px; list-style:none; }
-.nav-links a {
-    font-weight:500; font-size:0.9rem; color:var(--text-dark);
-    position:relative; padding:4px 0; transition:color 0.2s;
-}
-.nav-links a::after {
-    content:''; position:absolute; bottom:0; left:0; width:0; height:2px;
-    background:var(--accent-orange); transition:width 0.3s; border-radius:2px;
-}
-.nav-links a:hover { color:var(--primary-green); }
-.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
-.nav-cta {
-    background:var(--primary-green); color:#fff; padding:10px 24px;
-    border-radius:50px; font-weight:600; font-size:0.85rem;
-    transition:all 0.3s; border:2px solid var(--primary-green);
-}
-.nav-cta:hover { background:transparent; color:var(--primary-green); }
-.mobile-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
-.mobile-toggle span { width:24px; height:2px; background:var(--text-dark); transition:0.3s; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family:'Inter',sans-serif;
+            background:var(--off-white);
+            color:var(--text-dark);
+            line-height:1.6;
+            overflow-x:hidden;
+        }
+        img { max-width:100%; display:block; cursor: pointer; transition: opacity 0.2s; }
+        body.edit-mode img:hover { opacity: 0.7; filter: brightness(0.8); }
+        a { text-decoration:none; color:inherit; }
 
-/* ===== HERO ===== */
-.hero {
-    min-height:100vh; display:flex; align-items:center;
-    background:linear-gradient(135deg, var(--warm-cream) 0%, #f0ebe3 100%);
-    padding:120px 24px 80px; position:relative; overflow:hidden;
-}
-.hero::before {
-    content:''; position:absolute; top:-10%; right:-5%; width:600px; height:600px;
-    background:radial-gradient(circle, rgba(224,123,57,0.08) 0%, transparent 70%);
-    border-radius:50%;
-}
-.hero-container { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; width:100%; }
-.hero-badge {
-    display:inline-flex; align-items:center; gap:8px;
-    background:rgba(26,92,58,0.08); color:var(--primary-green);
-    padding:8px 18px; border-radius:50px; font-size:0.8rem; font-weight:600; margin-bottom:24px;
-}
-.hero-badge .dot { width:8px; height:8px; background:var(--accent-orange); border-radius:50%; animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-.hero h1 {
-    font-family:'Playfair Display',serif; font-size:3.8rem; font-weight:700;
-    line-height:1.15; color:var(--dark-green); margin-bottom:20px;
-}
-.hero h1 .highlight { color:var(--accent-orange); position:relative; }
-.hero h1 .highlight::after {
-    content:''; position:absolute; bottom:4px; left:0; right:0; height:12px;
-    background:rgba(245,197,66,0.3); z-index:-1; border-radius:4px;
-}
-.hero p { font-size:1.15rem; color:var(--text-muted); max-width:480px; margin-bottom:32px; line-height:1.7; }
-.hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
-.btn-primary {
-    background:var(--primary-green); color:#fff; padding:14px 32px;
-    border-radius:50px; font-weight:600; font-size:0.95rem;
-    border:2px solid var(--primary-green); transition:all 0.3s; display:inline-flex; align-items:center; gap:8px;
-}
-.btn-primary:hover { background:transparent; color:var(--primary-green); transform:translateY(-2px); }
-.btn-secondary {
-    background:transparent; color:var(--primary-green); padding:14px 32px;
-    border-radius:50px; font-weight:600; font-size:0.95rem;
-    border:2px solid var(--border-light); transition:all 0.3s;
-}
-.btn-secondary:hover { border-color:var(--primary-green); transform:translateY(-2px); }
-.hero-image-wrapper { position:relative; }
-.hero-image {
-    border-radius:24px; overflow:hidden; box-shadow:var(--shadow-card);
-    position:relative; z-index:2;
-}
-.hero-image img { width:100%; height:520px; object-fit:cover; }
-.hero-float {
-    position:absolute; background:#fff; padding:16px 20px; border-radius:16px;
-    box-shadow:var(--shadow-card); z-index:3; display:flex; align-items:center; gap:12px;
-}
-.float-1 { bottom:40px; left:-30px; animation:float 4s ease-in-out infinite; }
-.float-2 { top:60px; right:-20px; animation:float 4s ease-in-out 1s infinite; }
-@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-.float-icon { width:44px; height:44px; background:rgba(26,92,58,0.1); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
-.float-text strong { display:block; font-size:0.9rem; color:var(--dark-green); }
-.float-text span { font-size:0.75rem; color:var(--text-muted); }
+        /* ===== NAVIGATION & BRAND LOGO ===== */
+        .navbar {
+            position:fixed; top:0; left:0; right:0; z-index:1000;
+            background:rgba(253,248,240,0.92);
+            backdrop-filter:blur(20px);
+            border-bottom:1px solid var(--border-light);
+            transition:all 0.3s ease;
+        }
+        .navbar.scrolled { box-shadow:var(--shadow-soft); }
+        .nav-container {
+            max-width:1280px; margin:0 auto; padding:0 24px;
+            display:flex; align-items:center; justify-content:space-between; height:76px;
+        }
+        .logo-group { display:flex; align-items:center; gap:14px; cursor: pointer; }
+        
+        /* Specialized Dehydrated Fruit B Graphic Integration */
+        .logo-fruit-b {
+            width: 46px; height: 46px; position: relative;
+            background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--accent-orange) 100%);
+            border-radius: 50% 16px 16px 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.15), 0 4px 10px rgba(224,123,57,0.2);
+            overflow: hidden;
+        }
+        .logo-fruit-b::before {
+            content: ''; position: absolute; width: 85%; height: 85%;
+            border: 2px dashed rgba(255,255,255,0.6); border-radius: 50% 12px 12px 50%;
+        }
+        .logo-fruit-b::after {
+            content: ''; position: absolute; width: 100%; height: 2px;
+            background: rgba(0,0,0,0.05); top: 50%; transform: rotate(-15deg);
+        }
+        .logo-fruit-b .char-b {
+            font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px;
+            color: var(--dark-green); z-index: 2; text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        }
+        
+        .logo-text { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:var(--primary-green); }
+        .logo-text span { font-weight:400; font-size:0.8rem; display:block; color:var(--text-muted); margin-top:-2px; }
+        
+        .nav-links { display:flex; gap:36px; list-style:none; }
+        .nav-links a { font-weight:500; font-size:0.9rem; color:var(--text-dark); position:relative; padding:4px 0; }
+        .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--accent-orange); transition:width 0.3s; }
+        .nav-links a:hover { color:var(--primary-green); }
+        .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+        .nav-cta { background:var(--primary-green); color:#fff; padding:10px 24px; border-radius:50px; font-weight:600; font-size:0.85rem; border:2px solid var(--primary-green); }
+        .mobile-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+        .mobile-toggle span { width:24px; height:2px; background:var(--text-dark); }
 
-/* ===== SECTIONS COMMON ===== */
-.section { padding:100px 24px; }
-.section-header { text-align:center; max-width:640px; margin:0 auto 60px; }
-.section-label {
-    display:inline-block; color:var(--accent-orange); font-weight:600; font-size:0.8rem;
-    text-transform:uppercase; letter-spacing:2px; margin-bottom:12px;
-}
-.section-header h2 {
-    font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700;
-    color:var(--dark-green); margin-bottom:16px;
-}
-.section-header p { color:var(--text-muted); font-size:1.05rem; }
-.container { max-width:1280px; margin:0 auto; }
+        /* ===== HERO CONTENT SECTION ===== */
+        .hero { min-height:100vh; display:flex; align-items:center; background:linear-gradient(135deg, var(--warm-cream) 0%, #f0ebe3 100%); padding:120px 24px 80px; position:relative; overflow:hidden; }
+        .hero-container { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; width:100%; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(26,92,58,0.08); color:var(--primary-green); padding:8px 18px; border-radius:50px; font-size:0.8rem; font-weight:600; margin-bottom:24px; }
+        .hero-badge .dot { width:8px; height:8px; background:var(--accent-orange); border-radius:50%; }
+        .hero h1 { font-family:'Playfair Display',serif; font-size:3.8rem; font-weight:700; line-height:1.15; color:var(--dark-green); margin-bottom:20px; }
+        .hero h1 .highlight { color:var(--accent-orange); }
+        .hero p { font-size:1.15rem; color:var(--text-muted); max-width:480px; margin-bottom:32px; }
+        .hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+        .btn-primary { background:var(--primary-green); color:#fff; padding:14px 32px; border-radius:50px; font-weight:600; border:2px solid var(--primary-green); display:inline-flex; align-items:center; gap:8px; }
+        .btn-secondary { background:transparent; color:var(--primary-green); padding:14px 32px; border-radius:50px; font-weight:600; border:2px solid var(--border-light); }
+        .hero-image-wrapper { position:relative; }
+        .hero-image { border-radius:24px; overflow:hidden; box-shadow:var(--shadow-card); position:relative; z-index:2; }
+        .hero-image img { width:100%; height:520px; object-fit:cover; }
+        .hero-float { position:absolute; background:#fff; padding:16px 20px; border-radius:16px; box-shadow:var(--shadow-card); z-index:3; display:flex; align-items:center; gap:12px; }
+        .float-1 { bottom:40px; left:-30px; }
+        .float-2 { top:60px; right:-20px; }
 
-/* ===== FEATURES ===== */
-.features-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-.feature-card {
-    background:#fff; padding:36px 28px; border-radius:var(--radius);
-    text-align:center; border:1px solid var(--border-light);
-    transition:all 0.3s; position:relative; overflow:hidden;
-}
-.feature-card::before {
-    content:''; position:absolute; top:0; left:0; right:0; height:4px;
-    background:linear-gradient(90deg, var(--primary-green), var(--accent-orange));
-    transform:scaleX(0); transition:transform 0.3s;
-}
-.feature-card:hover::before { transform:scaleX(1); }
-.feature-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-card); }
-.feature-icon {
-    width:64px; height:64px; background:rgba(26,92,58,0.08); border-radius:18px;
-    display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 20px;
-}
-.feature-card h3 { font-size:1.1rem; font-weight:600; margin-bottom:10px; color:var(--dark-green); }
-.feature-card p { font-size:0.85rem; color:var(--text-muted); line-height:1.6; }
+        /* ===== STRUCTURAL SECTIONS ===== */
+        .section { padding:100px 24px; }
+        .section-header { text-align:center; max-width:640px; margin:0 auto 60px; }
+        .section-label { display:inline-block; color:var(--accent-orange); font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:12px; }
+        .section-header h2 { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700; color:var(--dark-green); margin-bottom:16px; }
+        .container { max-width:1280px; margin:0 auto; }
 
-/* ===== PRODUCTS ===== */
-.products-section { background:var(--warm-cream); }
-.products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
-.product-card {
-    background:#fff; border-radius:var(--radius); overflow:hidden;
-    border:1px solid var(--border-light); transition:all 0.35s;
-    position:relative;
-}
-.product-card:hover { transform:translateY(-8px); box-shadow:0 20px 48px rgba(0,0,0,0.1); }
-.product-image { position:relative; height:240px; overflow:hidden; }
-.product-image img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
-.product-card:hover .product-image img { transform:scale(1.08); }
-.product-badges {
-    position:absolute; top:16px; left:16px; display:flex; flex-direction:column; gap:6px;
-}
-.badge {
-    padding:5px 12px; border-radius:50px; font-size:0.7rem; font-weight:700;
-    text-transform:uppercase; letter-spacing:0.5px;
-}
-.badge-organic { background:var(--primary-green); color:#fff; }
-.badge-pure { background:var(--accent-orange); color:#fff; }
-.badge-size { background:rgba(255,255,255,0.9); color:var(--dark-green); backdrop-filter:blur(8px); }
-.product-info { padding:24px; }
-.product-category { font-size:0.75rem; color:var(--accent-orange); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; }
-.product-name { font-size:1.15rem; font-weight:700; color:var(--dark-green); margin-bottom:8px; }
-.product-desc { font-size:0.85rem; color:var(--text-muted); margin-bottom:16px; line-height:1.5; }
-.product-footer { display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid var(--border-light); }
-.product-price { font-size:1.3rem; font-weight:700; color:var(--primary-green); }
-.product-price span { font-size:0.8rem; color:var(--text-muted); font-weight:400; }
-.whatsapp-btn {
-    background:#25D366; color:#fff; padding:8px 18px; border-radius:50px;
-    font-size:0.8rem; font-weight:600; display:inline-flex; align-items:center; gap:6px;
-    transition:all 0.3s; border:none; cursor:pointer;
-}
-.whatsapp-btn:hover { background:#128C7E; transform:scale(1.05); }
+        /* ===== FEATURES GRID ===== */
+        .features-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+        .feature-card { background:#fff; padding:36px 28px; border-radius:var(--radius); text-align:center; border:1px solid var(--border-light); position:relative; }
+        .feature-icon { width:64px; height:64px; background:rgba(26,92,58,0.08); border-radius:18px; display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 20px; }
 
-/* ===== ABOUT ===== */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-.about-image { position:relative; }
-.about-image img { border-radius:var(--radius); width:100%; height:480px; object-fit:cover; box-shadow:var(--shadow-card); }
-.about-image::after {
-    content:''; position:absolute; bottom:-20px; right:-20px; width:200px; height:200px;
-    background:var(--accent-yellow); opacity:0.15; border-radius:var(--radius); z-index:-1;
-}
-.about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:32px; }
-.stat-box { background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid var(--border-light); text-align:center; }
-.stat-box .num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--primary-green); }
-.stat-box .label { font-size:0.8rem; color:var(--text-muted); margin-top:4px; }
-.about-content h3 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--dark-green); margin-bottom:16px; }
-.about-content p { color:var(--text-muted); margin-bottom:16px; line-height:1.7; }
-.about-list { list-style:none; margin-top:20px; }
-.about-list li { display:flex; align-items:center; gap:12px; margin-bottom:14px; font-size:0.95rem; }
-.about-list li::before { content:'✓'; width:24px; height:24px; background:rgba(26,92,58,0.1); color:var(--primary-green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; flex-shrink:0; }
+        /* ===== PRODUCT CATALOG CLUSTER ===== */
+        .products-section { background:var(--warm-cream); }
+        .products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+        .product-card { background:#fff; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border-light); position:relative; }
+        .product-image { position:relative; height:240px; overflow:hidden; }
+        .product-image img { width:100%; height:100%; object-fit:cover; }
+        .product-badges { position:absolute; top:16px; left:16px; display:flex; flex-direction:column; gap:6px; }
+        .badge { padding:5px 12px; border-radius:50px; font-size:0.7rem; font-weight:700; text-transform:uppercase; }
+        .badge-organic { background:var(--primary-green); color:#fff; }
+        .badge-size { background:rgba(255,255,255,0.9); color:var(--dark-green); backdrop-filter:blur(8px); }
+        .product-info { padding:24px; }
+        .product-category { font-size:0.75rem; color:var(--accent-orange); font-weight:600; text-transform:uppercase; margin-bottom:6px; }
+        .product-name { font-size:1.15rem; font-weight:700; color:var(--dark-green); margin-bottom:8px; }
+        .product-desc { font-size:0.85rem; color:var(--text-muted); margin-bottom:16px; }
+        .product-footer { display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid var(--border-light); }
+        .product-price { font-size:1.3rem; font-weight:700; color:var(--primary-green); }
+        .whatsapp-btn { background:#25D366; color:#fff; padding:8px 18px; border-radius:50px; font-size:0.8rem; font-weight:600; border:none; cursor:pointer; }
 
-/* ===== PROCESS ===== */
-.process-section { background:linear-gradient(180deg, var(--dark-green) 0%, var(--primary-green) 100%); color:#fff; }
-.process-section .section-label { color:var(--accent-yellow); }
-.process-section .section-header h2 { color:#fff; }
-.process-section .section-header p { color:rgba(255,255,255,0.7); }
-.process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
-.process-step { text-align:center; position:relative; }
-.process-step:not(:last-child)::after {
-    content:''; position:absolute; top:40px; right:-16px; width:32px; height:2px;
-    background:rgba(255,255,255,0.2);
-}
-.step-num {
-    width:80px; height:80px; background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2);
-    border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; margin:0 auto 20px;
-    color:var(--accent-yellow); backdrop-filter:blur(8px);
-}
-.process-step h3 { font-size:1.1rem; font-weight:600; margin-bottom:10px; }
-.process-step p { font-size:0.85rem; color:rgba(255,255,255,0.7); line-height:1.6; }
+        /* ===== ABOUT BRAND ASSETS ===== */
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+        .about-image { position:relative; }
+        .about-image img { border-radius:var(--radius); width:100%; height:480px; object-fit:cover; }
+        .about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:32px; }
+        .stat-box { background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid var(--border-light); text-align:center; }
+        .stat-box .num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--primary-green); }
 
-/* ===== CONTACT ===== */
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
-.contact-info h3 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--dark-green); margin-bottom:16px; }
-.contact-info > p { color:var(--text-muted); margin-bottom:32px; }
-.contact-item { display:flex; gap:16px; margin-bottom:24px; }
-.contact-icon { width:52px; height:52px; background:rgba(26,92,58,0.08); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
-.contact-item h4 { font-size:1rem; font-weight:600; color:var(--dark-green); margin-bottom:4px; }
-.contact-item p, .contact-item a { font-size:0.9rem; color:var(--text-muted); transition:color 0.2s; }
-.contact-item a:hover { color:var(--accent-orange); }
-.social-links { display:flex; gap:12px; margin-top:28px; }
-.social-links a {
-    width:44px; height:44px; background:var(--primary-green); color:#fff;
-    border-radius:12px; display:flex; align-items:center; justify-content:center;
-    font-size:1.1rem; transition:all 0.3s;
-}
-.social-links a:hover { background:var(--accent-orange); transform:translateY(-3px); }
-.contact-form { background:#fff; padding:40px; border-radius:var(--radius); border:1px solid var(--border-light); box-shadow:var(--shadow-soft); }
-.form-group { margin-bottom:20px; }
-.form-group label { display:block; font-size:0.85rem; font-weight:600; color:var(--dark-green); margin-bottom:8px; }
-.form-group input, .form-group textarea {
-    width:100%; padding:14px 18px; border:1px solid var(--border-light);
-    border-radius:var(--radius-sm); font-family:'Inter',sans-serif; font-size:0.9rem;
-    transition:all 0.2s; background:var(--off-white);
-}
-.form-group input:focus, .form-group textarea:focus {
-    outline:none; border-color:var(--primary-green); background:#fff;
-    box-shadow:0 0 0 3px rgba(26,92,58,0.08);
-}
-.form-group textarea { min-height:120px; resize:vertical; }
-.submit-btn {
-    width:100%; background:var(--primary-green); color:#fff; padding:16px;
-    border:none; border-radius:var(--radius-sm); font-weight:600; font-size:1rem;
-    cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;
-}
-.submit-btn:hover { background:var(--dark-green); transform:translateY(-2px); }
+        /* ===== PROCESS STEPS MATRIX ===== */
+        .process-section { background:linear-gradient(180deg, var(--dark-green) 0%, var(--primary-green) 100%); color:#fff; }
+        .process-section .section-label { color:var(--accent-yellow); }
+        .process-section .section-header h2 { color:#fff; }
+        .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+        .process-step { text-align:center; }
+        .step-num { width:80px; height:80px; background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; margin:0 auto 20px; color:var(--accent-yellow); }
 
-/* ===== FOOTER ===== */
-.footer { background:var(--dark-green); color:rgba(255,255,255,0.7); padding:60px 24px 24px; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:40px; margin-bottom:48px; }
-.footer-brand .logo-icon { background:rgba(255,255,255,0.1); margin-bottom:16px; }
-.footer-brand p { font-size:0.9rem; line-height:1.7; max-width:280px; }
-.footer h4 { color:#fff; font-size:1rem; font-weight:600; margin-bottom:20px; }
-.footer-links { list-style:none; }
-.footer-links li { margin-bottom:12px; }
-.footer-links a { font-size:0.9rem; transition:color 0.2s; }
-.footer-links a:hover { color:var(--accent-yellow); }
-.footer-bottom {
-    border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
-    font-size:0.8rem;
-}
+        /* ===== CONTACT PLATFORM INTERACTION ===== */
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+        .contact-info h3 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--dark-green); margin-bottom:16px; }
+        .contact-item { display:flex; gap:16px; margin-bottom:24px; }
+        .contact-icon { width:52px; height:52px; background:rgba(26,92,58,0.08); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+        .contact-form { background:#fff; padding:40px; border-radius:var(--radius); border:1px solid var(--border-light); }
+        .form-group { margin-bottom:20px; }
+        .form-group label { display:block; font-size:0.85rem; font-weight:600; margin-bottom:8px; }
+        .form-group input, .form-group textarea { width:100%; padding:14px 18px; border:1px solid var(--border-light); border-radius:var(--radius-sm); background:var(--off-white); }
+        .submit-btn { width:100%; background:var(--primary-green); color:#fff; padding:16px; border:none; border-radius:var(--radius-sm); font-weight:600; cursor:pointer; }
 
-/* ===== ADMIN EDIT MODE ===== */
-.admin-toggle {
-    position:fixed; bottom:24px; right:24px; z-index:9999;
-    background:var(--accent-orange); color:#fff; padding:14px 24px;
-    border-radius:50px; font-weight:600; font-size:0.85rem;
-    border:none; cursor:pointer; box-shadow:0 8px 24px rgba(224,123,57,0.3);
-    transition:all 0.3s; display:flex; align-items:center; gap:8px;
-}
-.admin-toggle:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(224,123,57,0.4); }
-.admin-toggle.active { background:var(--primary-green); }
-.admin-panel {
-    position:fixed; bottom:80px; right:24px; z-index:9998;
-    background:#fff; border-radius:var(--radius); padding:24px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.15); width:320px;
-    border:1px solid var(--border-light);
-    transform:translateY(20px); opacity:0; pointer-events:none;
-    transition:all 0.3s ease;
-}
-.admin-panel.show { transform:translateY(0); opacity:1; pointer-events:all; }
-.admin-panel h4 { font-size:1rem; color:var(--dark-green); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
-.admin-panel .admin-row { margin-bottom:14px; }
-.admin-panel label { display:block; font-size:0.75rem; font-weight:600; color:var(--text-muted); margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px; }
-.admin-panel input {
-    width:100%; padding:10px 14px; border:1px solid var(--border-light);
-    border-radius:8px; font-size:0.85rem; font-family:'Inter',sans-serif;
-    transition:all 0.2s;
-}
-.admin-panel input:focus { outline:none; border-color:var(--primary-green); }
-.admin-panel .save-btn {
-    width:100%; background:var(--primary-green); color:#fff; padding:10px;
-    border:none; border-radius:8px; font-weight:600; cursor:pointer; margin-top:8px;
-    font-family:'Inter',sans-serif; transition:background 0.2s;
-}
-.admin-panel .save-btn:hover { background:var(--dark-green); }
-.admin-panel .reset-btn {
-    width:100%; background:transparent; color:var(--text-muted); padding:10px;
-    border:1px solid var(--border-light); border-radius:8px; font-weight:600;
-    cursor:pointer; margin-top:8px; font-family:'Inter',sans-serif; font-size:0.8rem;
-    transition:all 0.2s;
-}
-.admin-panel .reset-btn:hover { color:var(--accent-orange); border-color:var(--accent-orange); }
+        /* ===== FOOTER MATRIX ===== */
+        .footer { background:var(--dark-green); color:rgba(255,255,255,0.7); padding:60px 24px 24px; }
+        .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:40px; margin-bottom:48px; }
+        .footer h4 { color:#fff; font-size:1rem; font-weight:600; margin-bottom:20px; }
+        .footer-links { list-style:none; }
+        .footer-links li { margin-bottom:12px; }
+        .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; }
 
-/* Edit mode highlights */
-body.edit-mode [data-editable] {
-    outline:2px dashed var(--accent-orange); outline-offset:4px;
-    cursor:text; position:relative;
-}
-body.edit-mode [data-editable]:hover::after {
-    content:attr(data-label); position:absolute; top:-24px; left:0;
-    background:var(--accent-orange); color:#fff; padding:2px 10px;
-    border-radius:4px; font-size:0.65rem; font-weight:600; white-space:nowrap;
-    pointer-events:none; z-index:10;
-}
-body.edit-mode [data-editable]:focus {
-    outline:2px solid var(--primary-green); background:rgba(26,92,58,0.03);
-}
+        /* ===== UNIVERSAL ADMINISTRATIVE CONTROLS ===== */
+        .admin-toggle { position:fixed; bottom:24px; right:24px; z-index:9999; background:var(--accent-orange); color:#fff; padding:14px 24px; border-radius:50px; font-weight:600; border:none; cursor:pointer; box-shadow:0 8px 24px rgba(224,123,57,0.3); }
+        .admin-panel { position:fixed; bottom:88px; right:24px; z-index:9998; background:#fff; border-radius:var(--radius); padding:24px; box-shadow:0 20px 60px rgba(0,0,0,0.15); width:340px; border:1px solid var(--border-light); display:none; max-height: 75vh; overflow-y: auto; }
+        .admin-panel.show { display:block; }
+        .admin-panel h4 { font-size:1rem; color:var(--dark-green); margin-bottom:16px; }
+        .admin-row { margin-bottom:14px; }
+        .admin-row label { display:block; font-size:0.75rem; font-weight:600; color:var(--text-muted); margin-bottom:4px; text-transform:uppercase; }
+        .admin-row input { width:100%; padding:10px 14px; border:1px solid var(--border-light); border-radius:8px; font-size:0.85rem; }
+        .save-btn { width:100%; background:var(--primary-green); color:#fff; padding:12px; border:none; border-radius:8px; font-weight:600; cursor:pointer; margin-top:8px; }
+        .reset-btn { width:100%; background:transparent; color:var(--text-muted); padding:10px; border:1px solid var(--border-light); border-radius:8px; cursor:pointer; margin-top:8px; font-size:0.8rem; }
 
-/* ===== PAGE TRANSITIONS ===== */
-.page { display:none; animation:fadeIn 0.5s ease; }
-.page.active { display:block; }
-@keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+        /* Inline Content Editable Indicators */
+        body.edit-mode [contenteditable="true"] {
+            outline: 2px dashed var(--accent-orange) !important;
+            outline-offset: 4px;
+            background: rgba(224, 123, 57, 0.05) !important;
+        }
+        body.edit-mode [contenteditable="true"]:focus {
+            outline: 2px solid var(--primary-green) !important;
+            background: rgba(26, 92, 58, 0.08) !important;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:1024px) {
-    .features-grid { grid-template-columns:repeat(2,1fr); }
-    .products-grid { grid-template-columns:repeat(2,1fr); }
-    .process-grid { grid-template-columns:repeat(2,1fr); }
-    .process-step:nth-child(2)::after { display:none; }
-    .footer-grid { grid-template-columns:1fr 1fr; }
-}
-@media(max-width:768px) {
-    .nav-links, .nav-cta { display:none; }
-    .mobile-toggle { display:flex; }
-    .hero-container { grid-template-columns:1fr; text-align:center; }
-    .hero h1 { font-size:2.6rem; }
-    .hero p { margin:0 auto 32px; }
-    .hero-image img { height:360px; }
-    .hero-float { display:none; }
-    .about-grid, .contact-grid { grid-template-columns:1fr; }
-    .features-grid, .products-grid, .process-grid { grid-template-columns:1fr; }
-    .process-step::after { display:none !important; }
-    .footer-grid { grid-template-columns:1fr; }
-    .section { padding:60px 20px; }
-    .section-header h2 { font-size:2rem; }
-    .mobile-menu {
-        position:fixed; top:72px; left:0; right:0; bottom:0; background:var(--warm-cream);
-        z-index:999; padding:40px 24px; display:none; flex-direction:column; gap:24px;
-    }
-    .mobile-menu.open { display:flex; }
-    .mobile-menu a { font-size:1.2rem; font-weight:600; color:var(--dark-green); }
-}
-</style>
-<base target="_blank">
+        /* ===== RESPONSIVE ARCHITECTURE INTERFACE ===== */
+        @media(max-width:1024px) {
+            .features-grid, .products-grid, .process-grid { grid-template-columns:repeat(2,1fr); }
+            .footer-grid { grid-template-columns:1fr 1fr; }
+        }
+        @media(max-width:768px) {
+            .nav-links, .nav-cta { display:none; }
+            .mobile-toggle { display:flex; }
+            .hero-container, .about-grid, .contact-grid { grid-template-columns:1fr; text-align:center; }
+            .hero h1 { font-size:2.6rem; }
+            .hero p { margin:0 auto 32px; }
+            .hero-image img { height:360px; }
+            .hero-float { display:none; }
+            .features-grid, .products-grid, .process-grid, .footer-grid { grid-template-columns:1fr; }
+            .section { padding:60px 20px; }
+            .mobile-menu { position:fixed; top:72px; left:0; right:0; bottom:0; background:var(--warm-cream); z-index:999; padding:40px 24px; display:none; flex-direction:column; gap:24px; }
+            .mobile-menu.open { display:flex; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <div class="logo-group">
-            <div class="logo-icon">B</div>
-            <div class="logo-text">Bismillah<span>Enterprise</span></div>
+    <!-- ===== NAVIGATION BRAND OVERVIEW ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-group">
+                <div class="logo-fruit-b">
+                    <span class="char-b">B</span>
+                </div>
+                <div class="logo-text" id="node-brand-title" contenteditable="false">Bismillah Enterprise<span id="node-brand-sub">Premium Dehydrated Fruits</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="products">Products</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+            <a href="#" class="nav-cta nav-link" data-page="products" id="node-nav-cta">Shop Catalog</a>
+            <div class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-            <li><a href="#" class="nav-link" data-page="products">Products</a></li>
-            <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-            <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-        </ul>
-        <a href="#" class="nav-cta nav-link" data-page="products">Shop Now</a>
-        <div class="mobile-toggle" onclick="toggleMobileMenu()">
-            <span></span><span></span><span></span>
-        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="nav-link" data-page="home">Home</a>
+        <a href="#" class="nav-link" data-page="products">Products</a>
+        <a href="#" class="nav-link" data-page="about">About Us</a>
+        <a href="#" class="nav-link" data-page="contact">Contact</a>
     </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="#" class="nav-link" data-page="home" onclick="toggleMobileMenu()">Home</a>
-    <a href="#" class="nav-link" data-page="products" onclick="toggleMobileMenu()">Products</a>
-    <a href="#" class="nav-link" data-page="about" onclick="toggleMobileMenu()">About Us</a>
-    <a href="#" class="nav-link" data-page="contact" onclick="toggleMobileMenu()">Contact</a>
-</div>
 
-<!-- ===== HOME PAGE ===== -->
-<div class="page active" id="page-home">
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge"><span class="dot"></span> 100% Natural & Organic</div>
-                <h1>Pure Goodness, <span class="highlight">Naturally Dried</span></h1>
-                <p>Premium dehydrated fruits, vegetables, and organic powders — hygienically processed and perfectly preserved for your healthy lifestyle. From farm to package, nature's best.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary nav-link" data-page="products">Explore Products →</a>
-                    <a href="#" class="btn-secondary nav-link" data-page="about">Our Story</a>
+    <!-- ===== MAIN PAGE: HOME CANVAS ===== -->
+    <div class="page active" id="page-home">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge" id="node-hero-badge"><span class="dot"></span> 100% Pure Sliced Dehydration</div>
+                    <h1 id="node-hero-h1">Pure Nutrition, <span class="highlight">Perfectly Dried</span></h1>
+                    <p id="node-hero-p">Premium dehydrated fruits, vegetables, and natural culinary powders. Processed hygienically to retain organic profile structure without additives across Pakistan.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary nav-link" data-page="products" id="node-hero-btn1">Explore Catalog</a>
+                        <a href="#" class="btn-secondary nav-link" data-page="about" id="node-hero-btn2">Our Methodology</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800&q=80" alt="Dried fruits and vegetables">
-                </div>
-                <div class="hero-float float-1">
-                    <div class="float-icon">🍌</div>
-                    <div class="float-text"><strong>Sun-Dried</strong><span>Banana Chips</span></div>
-                </div>
-                <div class="hero-float float-2">
-                    <div class="float-icon">🧄</div>
-                    <div class="float-text"><strong>Pure Powder</strong><span>Garlic & Onion</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Why Choose Us</span>
-                <h2>The Bismillah Difference</h2>
-                <p>We combine traditional sun-drying wisdom with modern hygienic processing to deliver nature's finest.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌿</div>
-                    <h3>100% Organic</h3>
-                    <p>Sourced from certified organic farms with zero chemical preservatives or artificial additives.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">☀️</div>
-                    <h3>Sun-Dried Process</h3>
-                    <p>Traditional sun-drying combined with modern dehydration for optimal nutrient retention.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏭</div>
-                    <h3>Hygienic Facility</h3>
-                    <p>State-of-the-art processing facility meeting international food safety standards.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h3>Premium Packaging</h3>
-                    <p>Airtight, moisture-proof packaging from 100g to 500g to ensure long-lasting freshness.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products Preview -->
-    <section class="section products-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Collection</span>
-                <h2>Featured Products</h2>
-                <p>Explore our range of premium dehydrated foods, crafted with care and packed with flavor.</p>
-            </div>
-            <div class="products-grid" id="featuredProducts">
-                <!-- Populated by JS -->
-            </div>
-            <div style="text-align:center; margin-top:40px;">
-                <a href="#" class="btn-primary nav-link" data-page="products">View All Products →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section process-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Process</span>
-                <h2>From Farm to Package</h2>
-                <p>Every product goes through a meticulous process to ensure quality, safety, and taste.</p>
-            </div>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-num">01</div>
-                    <h3>Select & Source</h3>
-                    <p>Hand-picked fresh produce from trusted organic farms across Pakistan.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">02</div>
-                    <h3>Clean & Prep</h3>
-                    <p>Thorough washing, peeling, and slicing in our hygienic facility.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">03</div>
-                    <h3>Dehydrate</h3>
-                    <p>Controlled sun-drying and modern dehydration to lock in nutrients.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-num">04</div>
-                    <h3>Pack & Deliver</h3>
-                    <p>Vacuum-sealed in premium packaging and shipped fresh to your door.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-<!-- ===== PRODUCTS PAGE ===== -->
-<div class="page" id="page-products">
-    <section class="section products-section" style="padding-top:120px;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Shop Now</span>
-                <h2>Our Products</h2>
-                <p>Premium dehydrated fruits, vegetables, and organic powders — available in 100g to 500g packs.</p>
-            </div>
-            <div class="products-grid" id="allProducts">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- ===== ABOUT PAGE ===== -->
-<div class="page" id="page-about">
-    <section class="section" style="padding-top:120px;">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80" alt="Dried fruit processing">
-                </div>
-                <div class="about-content">
-                    <span class="section-label">About Us</span>
-                    <h3>Pure Nature, Perfectly Preserved</h3>
-                    <p>Bismillah Enterprise is a premium food dehydration startup based in Pakistan, dedicated to bringing you the finest sun-dried fruits, vegetables, and organic powders. We believe that nature's bounty should be enjoyed year-round, not just in season.</p>
-                    <p>Our state-of-the-art dehydration facility combines traditional sun-drying wisdom with modern hygienic processing. Every batch is carefully monitored to ensure optimal moisture removal while preserving essential nutrients, natural flavors, and vibrant colors.</p>
-                    <ul class="about-list">
-                        <li>Zero preservatives or artificial additives</li>
-                        <li>Hygienic, ISO-compliant processing facility</li>
-                        <li>Sourced from certified organic farms</li>
-                        <li>Eco-friendly, recyclable packaging</li>
-                        <li>100% satisfaction guarantee</li>
-                    </ul>
-                    <div class="about-stats">
-                        <div class="stat-box"><div class="num">15+</div><div class="label">Product Varieties</div></div>
-                        <div class="stat-box"><div class="num">100%</div><div class="label">Organic Sourced</div></div>
-                        <div class="stat-box"><div class="num">500g</div><div class="label">Max Pack Size</div></div>
-                        <div class="stat-box"><div class="num">24h</div><div class="label">Fast Dispatch</div></div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800&q=80" alt="Premium Dried Items" id="img-hero-main">
+                    </div>
+                    <div class="hero-float float-1">
+                        <div>🍌</div>
+                        <div class="float-text"><strong id="node-float1-h">Sun-Dried</strong><span id="node-float1-s">Banana Chips</span></div>
+                    </div>
+                    <div class="hero-float float-2">
+                        <div>🧄</div>
+                        <div class="float-text"><strong id="node-float2-h">Pure Powder</strong><span id="node-float2-s">Garlic Flakes</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
 
-<!-- ===== CONTACT PAGE ===== -->
-<div class="page" id="page-contact">
-    <section class="section" style="padding-top:120px;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Get In Touch</span>
-                <h2>Contact Us</h2>
-                <p>Have questions or want to place a bulk order? Reach out to us directly.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>We'd love to hear from you. Whether it's a product inquiry, bulk order, or partnership opportunity — our team is ready to help.</p>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h4>WhatsApp / Phone</h4>
-                            <p data-editable="phone" data-label="Phone Number" id="contactPhone">+92 300 1234567</p>
-                        </div>
+        <!-- Dynamic Value Proposition Feature Layout -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" id="node-feat-lbl">Quality Matrix</span>
+                    <h2 id="node-feat-h2">The Dehydration Engineering Standard</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3 id="node-f1-t">100% Organic Sourcing</h3>
+                        <p id="node-f1-d">Procured directly from localized farm belts utilizing zero chemicals or stabilizing preserves.</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p data-editable="email" data-label="Email Address" id="contactEmail">info@bismillahenterprise.pk</p>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☀️</div>
+                        <h3 id="node-f2-t">Slow-Drying Matrix</h3>
+                        <p id="node-f2-d">Low-temperature thermal moisture extraction ensuring complete dynamic preservation of enzymes.</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <p data-editable="location" data-label="Business Location" id="contactLocation">Karachi, Pakistan</p>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏭</div>
+                        <h3 id="node-f3-t">Hygienic Execution</h3>
+                        <p id="node-f3-d">Processed within strict control structures matching premium international food guidelines.</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕐</div>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" id="fbLink" target="_blank" title="Facebook">f</a>
-                        <a href="#" id="igLink" target="_blank" title="Instagram">📷</a>
-                        <a href="#" id="waLink" target="_blank" title="WhatsApp">💬</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3 id="node-f4-t">Moisture Protection</h3>
+                        <p id="node-f4-d">Delivered in pristine layered multi-barrier packages scaled precisely from 100g up to 500g configurations.</p>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.');">
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="Enter your phone">
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea placeholder="Tell us what you need..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+            </div>
+        </section>
+
+        <!-- Product Preview Dynamic Aggregation Layer -->
+        <section class="section products-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" id="node-prod-lbl">Featured Batch</span>
+                    <h2 id="node-prod-h2">Pure Dehydrated Variants</h2>
+                </div>
+                <div class="products-grid" id="containerFeaturedProducts">
+                    <!-- Automatically aggregated by Javascript Core Engine -->
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
+    <!-- ===== MAIN PAGE: DYNAMIC CATALOGUE GRID ===== -->
+    <div class="page" id="page-products">
+        <section class="section" style="padding-top:140px; background:var(--warm-cream);">
+            <div class="container">
+                <div class="section-header" style="margin-bottom:0;">
+                    <span class="section-label" id="node-catalog-lbl">Direct Orders</span>
+                    <h2 id="node-catalog-h2">Complete Product Matrix</h2>
+                    <p id="node-catalog-p">Select premium natural cuts. Order securely processed packages routed through instantaneous WhatsApp connection paths.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="products-grid" id="containerAllCatalog">
+                    <!-- Dynamic rendering interface target -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== MAIN PAGE: BRAND HISTORY & VALUE SYSTEM ===== -->
+    <div class="page" id="page-about">
+        <section class="section" style="padding-top:140px;">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=800&q=80" alt="Agricultural Processing" id="img-about-asset">
+                    </div>
+                    <div class="about-content">
+                        <span class="section-label" id="node-ab-lbl">Our Core Values</span>
+                        <h3 id="node-ab-h3">Minimizing Waste, Maximizing Nutritional Vitality</h3>
+                        <p id="node-ab-p1">Bismillah Enterprise specializes in advanced industrial-grade agricultural dehydration. We convert fresh surplus yields into reliable, shelf-stable ingredients, mitigating structural post-harvest storage losses for Pakistani farming clusters.</p>
+                        <p id="node-ab-p2">We entirely disallow modern manufacturing shortcuts such as sulfur chemical saturation, sugar crystallization syrups, or artificial pigment enhancements. The natural visual geometry is preserved cleanly.</p>
+                        <div class="about-stats">
+                            <div class="stat-box">
+                                <div class="num" id="node-stat1-n">100%</div>
+                                <div class="label" id="node-stat1-l">Zero Sugar Infusions</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="num" id="node-stat2-n">Premium</div>
+                                <div class="label" id="node-stat2-l">Hygienic Grade Packaging</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== MAIN PAGE: INTERACTIVE REGISTRATION AND CONTACT LINK ===== -->
+    <div class="page" id="page-contact">
+        <section class="section" style="padding-top:140px;">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-label" id="node-ct-lbl">Communications</span>
+                        <h3 id="node-ct-h3">Initiate Enterprise Connection</h3>
+                        <p id="node-ct-p">Query wholesale pricing scales, contract food drying requirements, or direct customer fulfillment processes.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4 id="node-ct-ph-h">Direct Communication</h4>
+                                <p><span id="node-ct-phone-val">+92 300 1234567</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4 id="node-ct-em-h">Electronic Mail Box</h4>
+                                <p><span id="node-ct-email-val">info@bismillahenterprise.pk</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4 id="node-ct-lo-h">Processing Center</h4>
+                                <p><span id="node-ct-location-val">Karachi, Sindh, Pakistan</span></p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:24px; display:flex; gap:12px;">
+                            <a href="#" id="anchor-fb-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Facebook Profile Link</a>
+                            <a href="#" id="anchor-ig-link" style="padding:10px 20px; background:var(--primary-green); color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600;">Instagram Catalog Link</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form onsubmit="event.preventDefault(); alert('Transmission completed simulation route.');">
+                            <div class="form-group"><label>Client Name</label><input type="text" placeholder="Enter full name..."></div>
+                            <div class="form-group"><label>Email Pointer</label><input type="email" placeholder="name@domain.com"></div>
+                            <div class="form-group"><label>Inquiry Content</label><textarea placeholder="Outline production sizing..."></textarea></div>
+                            <button type="submit" class="submit-btn" id="node-form-submit">Dispatch Message Matrix</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== UNIVERSAL SYSTEM FOOTER ARCHITECTURE ===== -->
+    <footer class="footer">
+        <div class="nav-container footer-grid">
             <div class="footer-brand">
-                <div class="logo-icon" style="width:48px;height:48px;font-size:22px;">B</div>
-                <p>Premium food dehydration company specializing in sun-dried fruits, vegetables, and organic powders. Based in Pakistan, delivering nature's best nationwide.</p>
+                <h4 id="node-foot-brand-h">Bismillah Enterprise</h4>
+                <p id="node-foot-brand-p">Premium food dehydration processing platforms. Structuring sustainable food retention networks across Pakistani regional sectors.</p>
             </div>
             <div>
-                <h4>Quick Links</h4>
+                <h4>System Paths</h4>
                 <ul class="footer-links">
-                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
-                    <li><a href="#" class="nav-link" data-page="products">Products</a></li>
-                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="#" class="nav-link" data-page="home">Home Base</a></li>
+                    <li><a href="#" class="nav-link" data-page="products">Variant Index</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">Our Architecture</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Products</h4>
+                <h4>Legal Matrix</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Dried Fruits</a></li>
-                    <li><a href="#">Vegetable Chips</a></li>
-                    <li><a href="#">Organic Powders</a></li>
-                    <li><a href="#">Mixed Packs</a></li>
+                    <li><a href="#">Security Protocol</a></li>
+                    <li><a href="#">Operations Guide</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Contact Info</h4>
-                <ul class="footer-links">
-                    <li>📱 <span data-editable="phone" id="footerPhone">+92 300 1234567</span></li>
-                    <li>📧 <span data-editable="email" id="footerEmail">info@bismillahenterprise.pk</span></li>
-                    <li>📍 <span data-editable="location" id="footerLocation">Karachi, Pakistan</span></li>
-                </ul>
+                <h4>Local Infrastructure</h4>
+                <p style="font-size:0.9rem; margin-bottom:8px; color:rgba(255,255,255,0.7)" id="node-foot-loc">Hub: Karachi, Pakistan</p>
+                <p style="font-size:0.9rem; color:rgba(255,255,255,0.7)" id="node-foot-ph">Call: +92 300 1234567</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <span>© 2026 Bismillah Enterprise. All rights reserved.</span>
-            <span>Crafted with 💚 for healthy living</span>
+        <div class="nav-container footer-bottom">
+            <p id="node-foot-copy">&copy; 2026 Bismillah Enterprise. Retaining Natural Purity Processes. All Rights Reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- ===== ADMIN EDIT MODE ===== -->
-<button class="admin-toggle" id="adminToggle" onclick="toggleEditMode()">
-    <span>⚙️</span> Admin Edit Mode
-</button>
+    <!-- ===== ADMINISTRATIVE CONTROL INTERFACES ===== -->
+    <button class="admin-toggle" id="btnAdminCoreSystem" onclick="verifyAdminGateway()">
+        🔒 Access Admin Matrix
+    </button>
 
-<div class="admin-panel" id="adminPanel">
-    <h4><span>🔧</span> Admin Settings</h4>
-    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:16px;">Edit text directly on the page, or update fields below:</p>
-    <div class="admin-row">
-        <label>Phone / WhatsApp</label>
-        <input type="text" id="adminPhone" placeholder="+92 300 1234567">
-    </div>
-    <div class="admin-row">
-        <label>Email</label>
-        <input type="text" id="adminEmail" placeholder="info@bismillahenterprise.pk">
-    </div>
-    <div class="admin-row">
-        <label>Location</label>
-        <input type="text" id="adminLocation" placeholder="Karachi, Pakistan">
-    </div>
-    <div class="admin-row">
-        <label>WhatsApp Link</label>
-        <input type="text" id="adminWaLink" placeholder="https://wa.me/923001234567">
-    </div>
-    <div class="admin-row">
-        <label>Facebook URL</label>
-        <input type="text" id="adminFbLink" placeholder="https://facebook.com/...">
-    </div>
-    <div class="admin-row">
-        <label>Instagram URL</label>
-        <input type="text" id="adminIgLink" placeholder="https://instagram.com/...">
-    </div>
-    <button class="save-btn" onclick="saveAdminData()">💾 Save Changes</button>
-    <button class="reset-btn" onclick="resetAdminData()">↺ Reset to Default</button>
-</div>
+    <div class="admin-panel" id="uiAdminPanel">
+        <h4>🛠️ Dynamic Global Variable Studio</h4>
+        
+        <div style="background:#fdf8f0; padding:12px; border-radius:8px; margin-bottom:16px; border:1px solid var(--border-light);">
+            <p style="font-size:0.75rem; font-weight:700; color:var(--accent-orange);">💡 LIVE SCREEN EDIT ACTIVE</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">You can click directly on any text or title on the page and type to change it! Click any picture to swap its link!</p>
+        </div>
 
-<script>
-// ===== PRODUCT DATA =====
-const products = [
-    {
-        id: 1, name: "Sun-Dried Banana Chips", category: "Dried Fruits",
-        desc: "Crispy, naturally sweet banana chips sun-dried to perfection. No added sugar.",
-        price: "Rs. 350", size: "100g - 500g", image: "https://images.unsplash.com/photo-1574852859542-1b41217a7815?w=600&q=80",
-        badge: "organic", badge2: ""
-    },
-    {
-        id: 2, name: "Dried Apple Rings", category: "Dried Fruits",
-        desc: "Tart and chewy apple rings, dehydrated to preserve natural flavor and nutrients.",
-        price: "Rs. 450", size: "100g - 500g", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
-        badge: "organic", badge2: ""
-    },
-    {
-        id: 3, name: "Garlic Powder", category: "Organic Powders",
-        desc: "100% pure garlic powder. Intense flavor for cooking. No fillers or additives.",
-        price: "Rs. 280", size: "100g - 500g", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80",
-        badge: "pure", badge2: ""
-    },
-    {
-        id: 4, name: "Onion Powder", category: "Organic Powders",
-        desc: "Finely ground dehydrated onions. Perfect seasoning for all your culinary needs.",
-        price: "Rs. 250", size: "100g - 500g", image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&q=80",
-        badge: "pure", badge2: ""
-    },
-    {
-        id: 5, name: "Moringa Powder", category: "Organic Powders",
-        desc: "Nutrient-dense moringa leaf powder. A superfood packed with vitamins and minerals.",
-        price: "Rs. 550", size: "100g - 500g", image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=600&q=80",
-        badge: "organic", badge2: "pure"
-    },
-    {
-        id: 6, name: "Mixed Dry Fruits", category: "Dry Fruits",
-        desc: "A premium blend of almonds, cashews, raisins, and apricots. Energy-packed snack.",
-        price: "Rs. 750", size: "100g - 500g", image: "https://images.unsplash.com/photo-1599599810694-b1b50f9f9d0e?w=600&q=80",
-        badge: "organic", badge2: ""
-    },
-    {
-        id: 7, name: "Dried Mango Slices", category: "Dried Fruits",
-        desc: "Sweet and tangy mango slices, naturally dried under the sun. A tropical delight.",
-        price: "Rs. 400", size: "100g - 500g", image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=600&q=80",
-        badge: "organic", badge2: ""
-    },
-    {
-        id: 8, name: "Dehydrated Vegetable Mix", category: "Vegetables",
-        desc: "A colorful mix of dehydrated carrots, peas, corn, and beans. Ready for soups and stews.",
-        price: "Rs. 320", size: "100g - 500g", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
-        badge: "pure", badge2: ""
-    },
-    {
-        id: 9, name: "Dried Dates", category: "Dry Fruits",
-        desc: "Premium Ajwa and Sukkari dates, carefully dehydrated for extended shelf life.",
-        price: "Rs. 600", size: "100g - 500g", image: "https://images.unsplash.com/photo-1596018383438-52932e81c039?w=600&q=80",
-        badge: "organic", badge2: ""
-    }
-];
+        <div class="admin-row">
+            <label>Structural Brand Palette (Theme Color)</label>
+            <input type="color" id="input-theme-primary" onchange="applyLiveThemeColor(this.value, 'primary')">
+        </div>
+        <div class="admin-row">
+            <label>Accent Highlights Color</label>
+            <input type="color" id="input-theme-accent" onchange="applyLiveThemeColor(this.value, 'accent')">
+        </div>
+        
+        <hr style="margin:16px 0; border:none; border-top:1px solid var(--border-light);">
 
-// ===== RENDER PRODUCTS =====
-function renderProducts(containerId, limit = null) {
-    const container = document.getElementById(containerId);
-    const items = limit ? products.slice(0, limit) : products;
-    container.innerHTML = items.map(p => `
-        <div class="product-card">
-            <div class="product-image">
-                <img src="${p.image}" alt="${p.name}" loading="lazy">
-                <div class="product-badges">
-                    ${p.badge ? `<span class="badge badge-${p.badge}">${p.badge === 'organic' ? '100% Organic' : 'Pure Powder'}</span>` : ''}
-                    ${p.badge2 ? `<span class="badge badge-${p.badge2}">${p.badge2 === 'organic' ? '100% Organic' : 'Pure Powder'}</span>` : ''}
-                    <span class="badge badge-size">${p.size}</span>
+        <div class="admin-row">
+            <label>Target WhatsApp Integration URL</label>
+            <input type="text" id="cfg-whatsapp" placeholder="https://wa.me/923000000000">
+        </div>
+        <div class="admin-row">
+            <label>Facebook Anchor Target</label>
+            <input type="text" id="cfg-fb">
+        </div>
+        <div class="admin-row">
+            <label>Instagram Anchor Target</label>
+            <input type="text" id="cfg-ig">
+        </div>
+        
+        <button class="save-btn" onclick="commitGlobalSystemState()">💾 Commit Structural Changes</button>
+        <button class="reset-btn" onclick="purgeSystemStorageMatrix()">↺ Wipe Custom Layout Storage</button>
+    </div>
+
+    <!-- ===== JAVASCRIPT SYSTEM ENGINE ===== -->
+    <script>
+        // Baseline operational definitions
+        const baseSystemDefaults = {
+            whatsapp: "https://wa.me/923001234567",
+            fb: "https://facebook.com/bismillahenterprise",
+            ig: "https://instagram.com/bismillahenterprise",
+            primaryColor: "#1a5c3a",
+            accentColor: "#e07b39",
+            htmlSnapshot: {} // Storage for inline text updates
+        };
+
+        let systemState = {...baseSystemDefaults};
+
+        // Static Catalog Structuring Matrix
+        const functionalProductsData = [
+            { id: 1, name: "Premium Dehydrated Banana Chips", category: "Dried Fruit Cuts", price: 340, sizes: "100g - 500g", badge: "100% Sun-Dried", img: "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?w=600&q=80", desc: "Crispy potassium-dense slices perfect for wholesome snacking intervals.", featured: true },
+            { id: 2, name: "Dehydrated Apple Rings", category: "Dried Fruit Cuts", price: 460, sizes: "100g - 500g", badge: "Organic Core", img: "https://images.unsplash.com/photo-1576675483864-d13ec3984542?w=600&q=80", desc: "Dehydrated tart local apple rings maintaining high natural dietary fibers.", featured: true },
+            { id: 3, name: "Pure Dehydrated Garlic Powder", category: "Organic Powders", price: 290, sizes: "100g - 400g", badge: "Culinary Grade", img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80", desc: "Finely milled dehydration crops for instant spice enhancements.", featured: true },
+            { id: 4, name: "Premium Onion Powder", category: "Organic Powders", price: 270, sizes: "100g - 400g", badge: "Hygienic Mill", img: "https://images.unsplash.com/photo-1587735243881-992338dbdf92?w=600&q=80", desc: "Dehydrated ground pink field onions. Completely moisture locked.", featured: false },
+            { id: 5, name: "Botanical Moringa Leaves Powder", category: "Organic Powders", price: 480, sizes: "100g - 300g", badge: "Natural Superfood", img: "https://images.unsplash.com/photo-1546849443-d4b74c375f47?w=600&q=80", desc: "Fine micronized shade-dehydrated clean moringa leaf clusters.", featured: false },
+            { id: 6, name: "Sun-Dried Premium Mango Cheeks", category: "Dried Fruit Cuts", price: 580, sizes: "150g - 500g", badge: "Seasonal Pure Choice", img: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=600&q=80", desc: "Sweet, vitamin-rich dehydrated ripe local mango varieties.", featured: false }
+        ];
+
+        let administrationUnlocked = false;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeSystemState();
+            renderDynamicProductCards();
+            bindSPAInterfaceActions();
+
+            // Window Scroll Listener for Navbar Styling
+            window.addEventListener("scroll", () => {
+                const nav = document.getElementById("navbar");
+                if (window.scrollY > 20) nav.classList.add("scrolled");
+                else nav.classList.remove("scrolled");
+            });
+
+            // Universal Image Click Configuration Handler
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('click', () => {
+                    if (!administrationUnlocked) return;
+                    const nextUrl = prompt("Enter replacement public image URL target text:", img.src);
+                    if (nextUrl && nextUrl.trim() !== "") {
+                        img.src = nextUrl.trim();
+                        recordInlineTextMutation(img.id, nextUrl.trim(), true);
+                    }
+                });
+            });
+        });
+
+        // Initialize State & Storage
+        function initializeSystemState() {
+            const compiledStorage = localStorage.getItem("bismillah_production_matrix");
+            if (compiledStorage) {
+                try {
+                    const parsed = JSON.parse(compiledStorage);
+                    systemState = { ...baseSystemDefaults, ...parsed };
+                } catch(e) {
+                    systemState = { ...baseSystemDefaults };
+                }
+            }
+            applySynchronizedVariables();
+        }
+
+        function applySynchronizedVariables() {
+            // Apply Dynamic Inline Text Configurations
+            if (systemState.htmlSnapshot) {
+                Object.keys(systemState.htmlSnapshot).forEach(nodeId => {
+                    const element = document.getElementById(nodeId);
+                    if (element) {
+                        if (element.tagName === "IMG") {
+                            element.src = systemState.htmlSnapshot[nodeId];
+                        } else {
+                            element.innerHTML = systemState.htmlSnapshot[nodeId];
+                        }
+                    }
+                });
+            }
+
+            // Sync Inputs & Social Links
+            document.getElementById("cfg-whatsapp").value = systemState.whatsapp;
+            document.getElementById("cfg-fb").value = systemState.fb;
+            document.getElementById("cfg-ig").value = systemState.ig;
+            
+            document.getElementById("input-theme-primary").value = systemState.primaryColor;
+            document.getElementById("input-theme-accent").value = systemState.accentColor;
+
+            document.getElementById("anchor-fb-link").href = systemState.fb;
+            document.getElementById("anchor-ig-link").href = systemState.ig;
+
+            // Apply Theme Properties
+            document.documentElement.style.setProperty('--primary-green', systemState.primaryColor);
+            document.documentElement.style.setProperty('--accent-orange', systemState.accentColor);
+            // Derive dark green variant safely
+            document.documentElement.style.setProperty('--dark-green', adjustColorBrightness(systemState.primaryColor, -30));
+        }
+
+        // SPA Navigation Pipeline
+        function bindSPAInterfaceActions() {
+            document.querySelectorAll(".nav-link").forEach(anchor => {
+                anchor.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetPage = anchor.getAttribute("data-page");
+                    if (!targetPage) return;
+
+                    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+                    document.getElementById(`page-${targetPage}`).classList.add("active");
+
+                    document.querySelectorAll(".nav-links a").forEach(l => l.classList.remove("active"));
+                    const activeMatch = document.querySelector(`.nav-links a[data-page="${targetPage}"]`);
+                    if (activeMatch) activeMatch.classList.add("active");
+
+                    if(document.getElementById("mobileMenu").classList.contains("open")) {
+                        document.getElementById("mobileMenu").classList.remove("open");
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        }
+
+        // Card Architecture Engine
+        function buildDynamicCardBlueprint(item, scopeKey) {
+            const uniqueCardId = `card-prod-${scopeKey}-${item.id}`;
+            return `
+                <div class="product-card" id="${uniqueCardId}">
+                    <div class="product-image">
+                        <img src="${item.img}" alt="${item.name}" id="${uniqueCardId}-img">
+                        <div class="product-badges">
+                            <span class="badge badge-organic" id="${uniqueCardId}-bdg1" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.badge}</span>
+                            <span class="badge badge-size" id="${uniqueCardId}-bdg2" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.sizes}</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category" id="${uniqueCardId}-cat" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.category}</div>
+                        <h3 class="product-name" id="${uniqueCardId}-title" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.name}</h3>
+                        <p class="product-desc" id="${uniqueCardId}-desc" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.desc}</p>
+                        <div class="product-footer">
+                            <div class="product-price">Rs. <span id="${uniqueCardId}-prc" ${administrationUnlocked ? 'contenteditable="true"' : ''}>${item.price}</span></div>
+                            <button class="whatsapp-btn" onclick="executeWhatsAppTransmission('${item.name}', '${uniqueCardId}-prc')">💬 Order Via WA</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="product-info">
-                <div class="product-category">${p.category}</div>
-                <div class="product-name">${p.name}</div>
-                <div class="product-desc">${p.desc}</div>
-                <div class="product-footer">
-                    <div class="product-price">${p.price} <span>PKR</span></div>
-                    <button class="whatsapp-btn" onclick="orderViaWhatsApp('${p.name}', '${p.price}')">
-                        💬 Order via WhatsApp
-                    </button>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
+            `;
+        }
 
-function orderViaWhatsApp(productName, price) {
-    const phone = localStorage.getItem('be_phone') || '+923001234567';
-    const cleanPhone = phone.replace(/[^0-9]/g, '');
-    const message = `Hello Bismillah Enterprise! I would like to order: ${productName} (${price}). Please confirm availability.`;
-    const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-}
+        function renderDynamicProductCards() {
+            const featuredContainer = document.getElementById("containerFeaturedProducts");
+            const catalogContainer = document.getElementById("containerAllCatalog");
 
-// ===== NAVIGATION =====
-const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page');
+            let featuredAccumulator = "";
+            let catalogAccumulator = "";
 
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetPage = link.getAttribute('data-page');
-        if (!targetPage) return;
+            functionalProductsData.forEach(item => {
+                if (item.featured) featuredAccumulator += buildDynamicCardBlueprint(item, "feat");
+                catalogAccumulator += buildDynamicCardBlueprint(item, "cat");
+            });
 
-        pages.forEach(p => p.classList.remove('active'));
-        document.getElementById('page-' + targetPage).classList.add('active');
+            if (featuredContainer) featuredContainer.innerHTML = featuredAccumulator;
+            if (catalogContainer) catalogContainer.innerHTML = catalogAccumulator;
+        }
 
-        navLinks.forEach(l => l.classList.remove('active'));
-        document.querySelectorAll(`[data-page="${targetPage}"]`).forEach(l => l.classList.add('active'));
+        // WhatsApp Messaging Engine
+        function executeWhatsAppTransmission(baseName, priceNodeId) {
+            const targetedPrice = document.getElementById(priceNodeId)?.textContent.trim() || "Negotiable";
+            const stringPayload = `Assalam-o-Alaikum Bismillah Enterprise, I wish to query current distribution details or process an inventory request for the premium product variant [${baseName}] evaluated at Rs. ${targetedPrice}. Please confirm shipment steps.`;
+            window.open(`${systemState.whatsapp}?text=${encodeURIComponent(stringPayload)}`, '_blank');
+        }
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        document.getElementById('mobileMenu').classList.remove('open');
-    });
-});
-
-function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// ===== ADMIN EDIT MODE =====
-let editMode = false;
-
-function toggleEditMode() {
-    editMode = !editMode;
-    document.body.classList.toggle('edit-mode', editMode);
-    const btn = document.getElementById('adminToggle');
-    const panel = document.getElementById('adminPanel');
-
-    if (editMode) {
-        btn.innerHTML = '<span>✅</span> Edit Mode ON';
-        btn.classList.add('active');
-        panel.classList.add('show');
-        makeFieldsEditable();
-    } else {
-        btn.innerHTML = '<span>⚙️</span> Admin Edit Mode';
-        btn.classList.remove('active');
-        panel.classList.remove('show');
-        disableEditable();
-    }
-}
-
-function makeFieldsEditable() {
-    document.querySelectorAll('[data-editable]').forEach(el => {
-        el.contentEditable = true;
-        el.addEventListener('blur', saveFromEditable);
-    });
-}
-
-function disableEditable() {
-    document.querySelectorAll('[data-editable]').forEach(el => {
-        el.contentEditable = false;
-        el.removeEventListener('blur', saveFromEditable);
-    });
-}
-
-function saveFromEditable(e) {
-    const key = e.target.getAttribute('data-editable');
-    const value = e.target.innerText.trim();
-    localStorage.setItem('be_' + key, value);
-    syncAllFields(key, value);
-}
-
-function syncAllFields(key, value) {
-    document.querySelectorAll(`[data-editable="${key}"]`).forEach(el => {
-        if (el !== document.activeElement) el.innerText = value;
-    });
-    // Update admin panel inputs
-    const inputMap = { phone: 'adminPhone', email: 'adminEmail', location: 'adminLocation' };
-    if (inputMap[key]) document.getElementById(inputMap[key]).value = value;
-    // Update social links
-    if (key === 'phone') updateWhatsAppLink(value);
-}
-
-function updateWhatsAppLink(phone) {
-    const clean = phone.replace(/[^0-9]/g, '');
-    const waLink = document.getElementById('waLink');
-    if (waLink) waLink.href = `https://wa.me/${clean}`;
-}
-
-// ===== ADMIN PANEL SAVE/LOAD =====
-function saveAdminData() {
-    const data = {
-        phone: document.getElementById('adminPhone').value,
-        email: document.getElementById('adminEmail').value,
-        location: document.getElementById('adminLocation').value,
-        waLink: document.getElementById('adminWaLink').value,
-        fbLink: document.getElementById('adminFbLink').value,
-        igLink: document.getElementById('adminIgLink').value
-    };
-
-    Object.entries(data).forEach(([key, value]) => {
-        if (value) {
-            localStorage.setItem('be_' + key, value);
-            if (['phone','email','location'].includes(key)) {
-                syncAllFields(key, value);
+        // Password Authentication & Gateway Gateway
+        function verifyAdminGateway() {
+            if (!administrationUnlocked) {
+                const credentialChallenge = prompt("Enter administrative clearance pass key string:", "");
+                if (credentialChallenge === "admin123") {
+                    administrationUnlocked = true;
+                    activateAbsoluteInlineEditing();
+                    alert("Clearance confirmed. All visual nodes, paragraph metrics, and layout targets are now unlocked for text modification.");
+                } else {
+                    alert("Clearance verification rejected. Operations restricted.");
+                }
+            } else {
+                disableAdministrativeControlState();
             }
         }
-    });
 
-    // Update social links
-    if (data.fbLink) document.getElementById('fbLink').href = data.fbLink;
-    if (data.igLink) document.getElementById('igLink').href = data.igLink;
-    if (data.waLink) document.getElementById('waLink').href = data.waLink;
+        // Lock & Unlock Page Elements
+        function activateAbsoluteInlineEditing() {
+            document.body.classList.add("edit-mode");
+            document.getElementById("uiAdminPanel").classList.add("show");
+            
+            const actionBtn = document.getElementById("btnAdminCoreSystem");
+            actionBtn.innerHTML = "🏁 Lock Administration";
+            actionBtn.style.background = "var(--primary-green)";
 
-    alert('✅ All changes saved successfully! They will persist after refresh.');
-}
-
-function resetAdminData() {
-    if (!confirm('Are you sure you want to reset all data to defaults?')) return;
-    const keys = ['phone','email','location','waLink','fbLink','igLink'];
-    keys.forEach(k => localStorage.removeItem('be_' + k));
-    location.reload();
-}
-
-function loadSavedData() {
-    const defaults = {
-        phone: '+92 300 1234567',
-        email: 'info@bismillahenterprise.pk',
-        location: 'Karachi, Pakistan',
-        waLink: 'https://wa.me/923001234567',
-        fbLink: 'https://facebook.com/bismillahenterprise',
-        igLink: 'https://instagram.com/bismillahenterprise'
-    };
-
-    Object.entries(defaults).forEach(([key, defaultVal]) => {
-        const saved = localStorage.getItem('be_' + key) || defaultVal;
-
-        if (['phone','email','location'].includes(key)) {
-            syncAllFields(key, saved);
+            // Loop through all text elements to make them editable
+            const targetSelectors = 'h1, h2, h3, h4, p, span, a.btn-primary, a.btn-secondary, div.feature-card h3, div.stat-box .num, div.stat-box .label, div.logo-text';
+            document.querySelectorAll(targetSelectors).forEach(node => {
+                // Keep functional operational system paths non-editable
+                if (node.classList.contains("nav-link") || node.classList.contains("whatsapp-btn") || node.closest(".admin-panel") || node.closest(".logo-fruit-b")) return;
+                
+                // Assign systematic tracking identifier fallback strings if missing
+                if (!node.id) {
+                    node.id = "auto-node-" + Math.random().toString(36).substr(2, 9);
+                }
+                
+                node.setAttribute("contenteditable", "true");
+                node.addEventListener("blur", handleInlineBlurEvent);
+            });
+            
+            // Re-render product grids to inject text contenteditable properties
+            renderDynamicProductCards();
+            applySynchronizedVariables(); // Re-apply text state onto new attributes
+            
+            // Bind input listeners to the dynamic cards post-render
+            document.querySelectorAll(".product-card [contenteditable='true']").forEach(node => {
+                node.addEventListener("blur", handleInlineBlurEvent);
+            });
         }
 
-        const inputMap = { phone: 'adminPhone', email: 'adminEmail', location: 'adminLocation', waLink: 'adminWaLink', fbLink: 'adminFbLink', igLink: 'adminIgLink' };
-        if (inputMap[key]) document.getElementById(inputMap[key]).value = saved;
+        function disableAdministrativeControlState() {
+            document.body.classList.remove("edit-mode");
+            document.getElementById("uiAdminPanel").classList.remove("show");
+            
+            const actionBtn = document.getElementById("btnAdminCoreSystem");
+            actionBtn.innerHTML = "🔒 Access Admin Matrix";
+            actionBtn.style.background = "var(--accent-orange)";
 
-        if (key === 'waLink') document.getElementById('waLink').href = saved;
-        if (key === 'fbLink') document.getElementById('fbLink').href = saved;
-        if (key === 'igLink') document.getElementById('igLink').href = saved;
-    });
-}
+            document.querySelectorAll('[contenteditable="true"]').forEach(node => {
+                node.removeAttribute("contenteditable");
+                node.removeEventListener("blur", handleInlineBlurEvent);
+            });
+            administrationUnlocked = false;
+        }
 
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-    renderProducts('featuredProducts', 3);
-    renderProducts('allProducts');
-    loadSavedData();
-});
+        // Snapshot Persistence Handlers
+        function handleInlineBlurEvent(e) {
+            const nodeId = e.target.id;
+            const dynamicContent = e.target.innerHTML;
+            if (nodeId) {
+                recordInlineTextMutation(nodeId, dynamicContent, false);
+            }
+        }
 
-// Close admin panel when clicking outside
-document.addEventListener('click', (e) => {
-    const panel = document.getElementById('adminPanel');
-    const btn = document.getElementById('adminToggle');
-    if (editMode && !panel.contains(e.target) && !btn.contains(e.target)) {
-        panel.classList.remove('show');
-    }
-});
-</script>
+        function recordInlineTextMutation(nodeId, dataPayload, skipStorageCommit) {
+            if (!systemState.htmlSnapshot) systemState.htmlSnapshot = {};
+            systemState.htmlSnapshot[nodeId] = dataPayload;
+            
+            if (!skipStorageCommit) {
+                localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
+            }
+        }
+
+        function applyLiveThemeColor(hexValue, scope) {
+            if(scope === 'primary') {
+                systemState.primaryColor = hexValue;
+                document.documentElement.style.setProperty('--primary-green', hexValue);
+                document.documentElement.style.setProperty('--dark-green', adjustColorBrightness(hexValue, -30));
+            } else {
+                systemState.accentColor = hexValue;
+                document.documentElement.style.setProperty('--accent-orange', hexValue);
+            }
+        }
+
+        function commitGlobalSystemState() {
+            systemState.whatsapp = document.getElementById("cfg-whatsapp").value.trim();
+            systemState.fb = document.getElementById("cfg-fb").value.trim();
+            systemState.ig = document.getElementById("cfg-ig").value.trim();
+
+            // Save all custom inline modifications alongside configurations
+            localStorage.setItem("bismillah_production_matrix", JSON.stringify(systemState));
+            applySynchronizedVariables();
+            alert("All global modifications successfully written to browser memory layout!");
+            disableAdministrativeControlState();
+        }
+
+        function purgeSystemStorageMatrix() {
+            if (confirm("Revert layout configuration state back to base factory configurations? All custom changes will be lost.")) {
+                localStorage.removeItem("bismillah_production_matrix");
+                location.reload();
+            }
+        }
+
+        // Color Math Helper for Dark Green Shifts
+        function adjustColorBrightness(hex, percent) {
+            let R = parseInt(hex.substring(1,3),16);
+            let G = parseInt(hex.substring(3,5),16);
+            let B = parseInt(hex.substring(5,7),16);
+            R = parseInt(R * (100 + percent) / 100);
+            G = parseInt(G * (100 + percent) / 100);
+            B = parseInt(B * (100 + percent) / 100);
+            R = (R<255)?R:255; G = (G<255)?G:255; B = (B<255)?B:255;
+            R = (R>0)?R:0; G = (G>0)?G:0; B = (B>0)?B:0;
+            const rHex = (R.toString(16).length==1)?"0"+R.toString(16):R.toString(16);
+            const gHex = (G.toString(16).length==1)?"0"+G.toString(16):G.toString(16);
+            const bHex = (B.toString(16).length==1)?"0"+B.toString(16):B.toString(16);
+            return "#"+rHex+gHex+bHex;
+        }
+    </script>
 </body>
 </html>
